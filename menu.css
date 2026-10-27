@@ -128,3 +128,9 @@
 @supports (content-visibility:auto){
  #grid .dish{content-visibility:auto;contain-intrinsic-size:auto 390px}
 }
+
+/* Clean original brand artwork, shared by the header and footer. */
+.hero-brand-logo{display:block;width:74px;height:74px;object-fit:contain;margin:-18px auto 3px}
+footer img{object-fit:contain;border-radius:0}
+@media(min-width:601px) and (max-width:999px){.hero-brand-logo{width:60px;height:60px;margin:-16px auto 2px}}
+@media(max-width:600px){.hero-brand-logo{position:absolute;width:50px;height:50px;top:-65px;left:calc(50% - 25px);margin:0;padding:3px;border-radius:50%;background:#f6f2e7ed;box-shadow:0 2px 8px #123e3014}}
