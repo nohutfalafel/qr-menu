@@ -42,7 +42,7 @@ const restaurantPhotos = {
  "Falafel Porsiyon": "assets/platter-cutouts/falafel-porsiyon.webp",
  "Bakla Tabağı": "assets/platter-cutouts/bakla.webp",
  "Yoğurtlu Bakla Tabağı": "assets/platter-cutouts/bakla.webp",
- "Patlıcanlı Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
+ "Patlıcanlı Fatte": "assets/platter-cutouts/fatte-selected-three-20261028.webp",
  "Tereyağında Kuruyemişli Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
  "Patatesli Falafel Dürüm": "assets/wrap-cutouts/wraps.webp",
  "Ispanaklı Sembusek (4 Adet)": "assets/side-cutouts/sides.webp",
@@ -342,7 +342,7 @@ function drinkProductVisual(item){
 
 // All fatte bowls share the same cutout frame.
 const fattePhotoCrops={
- "Patlıcanlı Fatte":{width:1536,height:1024,crop:[0,104,768,768]},
+ "Patlıcanlı Fatte":{width:1536,height:1024,crop:[512,215,512,512]},
  "Tereyağlı Fatte":{width:1536,height:1024,crop:[0,104,768,768]},
  "Tereyağında Kuruyemişli Fatte":{width:1536,height:1024,crop:[768,104,768,768]},
  "Kavurmalı Fatte":{width:1254,height:1254,crop:[50,50,1150,1150]}
