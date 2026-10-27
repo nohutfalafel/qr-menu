@@ -140,13 +140,18 @@ footer img{object-fit:contain;border-radius:50%;background:#fbf9f3;padding:5px}
 .menu-unavailable{display:block;padding:20px;border:1px solid #d4c28f;border-radius:12px;background:#fff8e7;color:#123e30;line-height:1.6}
 .menu-unavailable a{text-decoration:underline}
 
-/* Isolated restaurant illustration beside the visit details. */
-.visit{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:center;gap:clamp(24px,4vw,64px);padding:30px max(4%,calc((100% - 1400px)/2));text-align:start}
-.visit-copy{min-width:0}
-.visit .visit-actions{justify-content:flex-start;flex-wrap:wrap}
-.visit-illustration{display:flex;align-items:center;justify-content:center;min-width:0;direction:ltr}
-.visit-illustration img{display:block;width:100%;max-width:350px;height:auto;object-fit:contain}
-@media(max-width:700px){.visit{grid-template-columns:minmax(0,1fr);gap:20px;padding:29px 18px;text-align:center}.visit .visit-actions{justify-content:center}.visit-illustration img{max-width:260px}}
+/* Keep the storefront grounded at the footer and the visit details nearby. */
+.visit{display:block;padding:0 28px;text-align:start;background:var(--cream)}
+.visit-inner{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.85fr);align-items:center;gap:40px;max-width:1020px;margin:0 auto}
+.visit-copy{min-width:0;padding:46px 0 52px}
+.visit h2{font-size:clamp(30px,3.2vw,42px);line-height:1.16;margin:0 0 18px}
+.visit p{max-width:38ch;font-size:19px;line-height:1.55;margin:9px 0}
+.visit .visit-actions{justify-content:flex-start;flex-wrap:wrap;gap:12px;margin-top:24px}
+.visit-actions a{padding:12px 23px}
+.visit-illustration{width:100%;max-width:360px;aspect-ratio:1015/1086;align-self:end;justify-self:end;overflow:hidden;direction:ltr;margin-bottom:-1px}
+.visit-illustration img{display:block;width:142.66%;max-width:none;height:auto;margin-left:-21.28%}
+@media(max-width:700px){.visit{padding:0 22px}.visit-inner{grid-template-columns:minmax(0,1fr);gap:0;max-width:460px}.visit-copy{padding:32px 0 20px;text-align:center}.visit h2{font-size:30px;margin-bottom:14px}.visit p{font-size:17px;margin:8px auto}.visit .visit-actions{justify-content:center;margin-top:20px}.visit-illustration{max-width:270px;justify-self:center}}
+
 
 /* Approved wrap photographs already include their own soft food shadows. */
 .wrap-photo{filter:none}
