@@ -28,13 +28,13 @@ const restaurantPhotos = {
  "Şambali Tatlısı": "assets/dessert-cutouts/sambali-one-almond.webp",
  "Tahinli Muhallebi": "assets/dessert-cutouts/tahinli-muhallebi.webp",
  "Kıymalı Sembusek (4 Adet)": "assets/side-cutouts/sides.webp",
- "Nohut Özel Dürüm": "assets/wrap-cutouts/wraps.webp",
- "Falafel Dürüm": "assets/wrap-cutouts/wraps.webp",
- "Patatesli Patlıcanlı Falafel Dürüm": "assets/wrap-cutouts/wraps.webp",
+ "Nohut Özel Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
+ "Falafel Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
+ "Patatesli Patlıcanlı Falafel Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
  "Kibbe (3 Adet)": "assets/products/kibbe-6003492c.jpg",
  "Sarma (6 Adet)": "assets/products/tgo-9295403_1738157981309.jpg",
  "Tereyağlı Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
- "Patates Dürüm": "assets/wrap-cutouts/wraps.webp",
+ "Patates Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
  "Vegan Özel Tabağı": "assets/platter-cutouts/vegan-ozel.webp",
  "Beyrut Tabağı": "assets/platter-cutouts/nohut-ozel.webp",
  "Kuruyemişli Humus": "assets/meze-cutouts/kuruyemisli-humus.webp",
@@ -44,7 +44,7 @@ const restaurantPhotos = {
  "Yoğurtlu Bakla Tabağı": "assets/platter-cutouts/bakla.webp",
  "Patlıcanlı Fatte": "assets/platter-cutouts/fatte-selected-three-20261028.webp",
  "Tereyağında Kuruyemişli Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
- "Patatesli Falafel Dürüm": "assets/wrap-cutouts/wraps.webp",
+ "Patatesli Falafel Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
  "Ispanaklı Sembusek (4 Adet)": "assets/side-cutouts/sides.webp",
  "Patates Kızartması": "assets/side-cutouts/sides.webp",
  "Sade Humus": "assets/meze-cutouts/sade-humus-top.webp",
@@ -100,11 +100,11 @@ function sideProductVisual(item,source){
 
 // Main wrap photographs share the same canvas; real open and folded forms are retained.
 const wrapPhotoCrops={
- "Falafel Dürüm":[20,65,480,435],
- "Patates Dürüm":[516,127,506,356],
- "Nohut Özel Dürüm":[1015,34,512,479],
- "Patatesli Patlıcanlı Falafel Dürüm":[4,545,545,456],
- "Patatesli Falafel Dürüm":[546,538,500,460]
+ "Falafel Dürüm":[20,76,470,362],
+ "Patates Dürüm":[520,76,480,362],
+ "Nohut Özel Dürüm":[1030,76,486,362],
+ "Patatesli Patlıcanlı Falafel Dürüm":[172,522,530,367],
+ "Patatesli Falafel Dürüm":[810,520,534,370]
 };
 
 
@@ -355,7 +355,10 @@ function productVisual(item,index){
  if(item[0]==='drink')return drinkProductVisual(item);
  const actualPhoto=restaurantPhotos[item[1]],isCutout=isMenuCutout(item);
  const wrapCrop=wrapPhotoCrops[item[1]];
- if(isCutout&&wrapCrop)return `<svg class="meze-cutout" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><svg x="65" y="65" width="870" height="870" viewBox="${wrapCrop.join(' ')}" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="${escapeHtml(actualPhoto)}" width="1536" height="1024"/></svg></svg>`;
+ if(isCutout&&wrapCrop){
+  const height=870*wrapCrop[3]/wrapCrop[2];
+  return `<svg class="meze-cutout wrap-photo" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><svg x="65" y="${(1000-height)/2}" width="870" height="${height}" viewBox="${wrapCrop.join(' ')}" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="${escapeHtml(actualPhoto)}" width="1536" height="1024"/></svg></svg>`;
+ }
  const sideVisual=sideProductVisual(item,actualPhoto);if(sideVisual)return sideVisual;
  const saladCrop=saladPhotoCrops[item[1]];
  if(isCutout&&saladCrop)return `<svg class="meze-cutout" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><svg x="80" y="80" width="840" height="840" viewBox="${saladCrop.join(' ')}" preserveAspectRatio="none" overflow="hidden"><image href="${escapeHtml(actualPhoto)}" width="2156" height="729"/></svg></svg>`;

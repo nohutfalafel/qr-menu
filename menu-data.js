@@ -1,11 +1,11 @@
 // Original Turkish menu names, prices and descriptions are preserved. English guest-facing copy has been refined.
 const categories=[['all','Tümü','All'],['wrap','Dürümler','Wraps'],['plate','Porsiyonlar','Platters'],['fatte','Fatte','Fatteh'],['meze','Mezeler','Appetizers'],['side','Diğer','Sides'],['salad','Salatalar','Salads'],['dessert','Tatlı','Desserts'],['drink','İçecekler','Drinks']];
 const data=[
-['wrap','Falafel Dürüm','Falafel Wrap',140,'Humus, marul, domates, salatalık turşusu, nane, maydanoz, tahinli sos','Hummus, lettuce, tomato, pickles, mint, parsley and tahini sauce'],
-['wrap','Patates Dürüm','Fries Wrap',135,'Kızartılmış patates, marul, domates, salatalık turşusu, nane, maydanoz','Crispy fries with lettuce, tomato, pickles, mint and parsley'],
-['wrap','Nohut Özel Dürüm','Nohut Special Wrap',185,'Kızartılmış patlıcan, falafel, mütebbel, marul, domates, turşu, nane, maydanoz','Falafel, fried eggplant, mutabbal, lettuce, tomato, pickles, mint and parsley'],
-['wrap','Patatesli Patlıcanlı Falafel Dürüm','Falafel Wrap with Fries & Eggplant',195,'Kızartılmış patates ve patlıcan, falafel, mütebbel, marul, domates, salatalık turşusu, nane, maydanoz','Falafel, fries, fried eggplant, mutabbal, lettuce, tomato, pickles, mint and parsley'],
-['wrap','Patatesli Falafel Dürüm','Falafel & Fries Wrap',185,'Kızarmış patates, falafel, marul, domates, turşu, nane, maydanoz','Falafel, fries, lettuce, tomato, pickles, mint and parsley'],
+['wrap','Falafel Dürüm','Falafel Wrap',140,"Falafel, humus, marul, domates, salatalık, nane, maydanoz, tarator sosu","Falafel, hummus, lettuce, tomato, fresh cucumber, mint, parsley and tarator sauce"],
+['wrap','Patates Dürüm','Fries Wrap',135,"Kızartılmış patates, humus, marul, domates, salatalık, nane, maydanoz, tarator sosu","Crispy fries, hummus, lettuce, tomato, fresh cucumber, mint, parsley and tarator sauce"],
+['wrap','Nohut Özel Dürüm','Nohut Special Wrap',185,"Kızartılmış patlıcan, falafel, humus, mütebbel, marul, domates, salatalık, nane, maydanoz, tarator sosu","Falafel, fried eggplant, hummus, mutabbal, lettuce, tomato, fresh cucumber, mint, parsley and tarator sauce"],
+['wrap','Patatesli Patlıcanlı Falafel Dürüm','Falafel Wrap with Fries & Eggplant',195,"Kızartılmış patates ve patlıcan, falafel, humus, mütebbel, marul, domates, salatalık, nane, maydanoz, tarator sosu","Falafel, fries, fried eggplant, hummus, mutabbal, lettuce, tomato, fresh cucumber, mint, parsley and tarator sauce"],
+['wrap','Patatesli Falafel Dürüm','Falafel & Fries Wrap',185,"Kızarmış patates, falafel, humus, marul, domates, salatalık, nane, maydanoz, tarator sosu","Falafel, fries, hummus, lettuce, tomato, fresh cucumber, mint, parsley and tarator sauce"],
 ['plate','Falafel Porsiyon','Falafel Platter',200,'6 adet falafel, humus, babagannuş, mütebbel','Six falafel pieces served with hummus, baba ghanoush and mutabbal'],
 ['plate','Vegan Özel Tabağı','Vegan Special Platter',320,'4 falafel, 2 ıspanaklı sembusek, 3 sarma, babagannuş, humus','Four falafel pieces, two spinach sambousek, three stuffed vine leaves, baba ghanoush and hummus'],
 ['plate','Nohut Özel Tabağı','Nohut Special Platter',350,'4 falafel, 1 kibbe, 2 ıspanaklı sembusek, humus','Four falafel pieces, one kibbeh, two spinach sambousek and hummus'],
