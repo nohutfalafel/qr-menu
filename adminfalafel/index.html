@@ -5,7 +5,12 @@
 </style></head><body>
 <div class="app"><aside class="sidebar"><div class="brand"><img src="../assets/original-logo.jpeg" alt=""><span>NOHUT FALAFEL<small>OWNER DASHBOARD</small></span></div><nav class="nav"><button class="active" data-view="products">▦ &nbsp; Ürün Yönetimi</button><button data-view="preview">↗ &nbsp; Menüyü Gör</button></nav><div class="sidebar-foot">Ömer için tasarlandı<br>Yönetim paneli • Önizleme</div></aside>
 <main class="main"><div class="top"><div><div class="eyebrow">Nohut Falafel / Admin</div><h1>Menü Yönetimi</h1><p class="sub">Ürünleri ve fiyatları tek yerden yönetin.</p></div><div class="owner"><b>Ö</b> Ömer · İşletme Sahibi</div></div>
-<div class="notice">⚠️ <strong>Tasarım önizlemesi:</strong> Bu sayfa henüz giriş sistemi veya canlı veritabanına bağlı değildir. Değişiklikler yalnızca bu tarayıcıda taslak olarak saklanır; müşteri menüsünü değiştirmez.</div>
+<div class="notice" style="background:#e9f3ed;border-color:#bdd7c5;color:#194533;line-height:1.7">
+<strong>🔐 Canlı Menü ve Kampanya Yönetimi</strong>
+<p style="margin:8px 0">Fiyatları ve kampanyaları gerçek QR menüde değiştirmek için Pages CMS'yi açın. <strong>GitHub ile giriş → nohutfalafel/qr-menu → main → Menü Fiyatları / Kampanyalar → Kaydet</strong>.</p>
+<a class="primary" style="display:inline-block;text-decoration:none" href="https://app.pagescms.org/" target="_blank" rel="noopener noreferrer">Pages CMS'yi Aç ↗</a>
+<p style="margin:10px 0 0;font-size:12px">İlk kullanımda GitHub hesabının repo erişimi için Pages CMS uygulamasını yetkilendirmesi gerekir. Yalnızca qr-menu deposunu seçin. Aşağıdaki eski düzenleme tablosu <strong>sadece tarayıcı taslağıdır</strong> ve canlı menüyü değiştirmez.</p>
+</div>
 <section class="panel"><div class="panel-head"><h2>Ürün Listesi</h2><div class="actions"><button class="secondary" id="reset">↺ Taslağı Sıfırla</button><button class="primary" id="add">＋ Yeni Ürün</button></div></div>
 <div class="filters"><input id="search" placeholder="Ürün ara..." aria-label="Ürün ara"><select id="category" aria-label="Kategori"><option value="">Tüm Kategoriler</option></select></div>
 <div class="table-wrap"><table><thead><tr><th>Ürün</th><th>Kategori</th><th>Fiyat</th><th>İşlem</th></tr></thead><tbody id="rows"></tbody></table></div><p class="hint">Değişiklikler sadece bu cihazdaki önizlemede saklanır. Gerçek yayın için güvenli GitHub kimlik doğrulaması ve yayınlama bağlantısı gerekir.</p></section></main></div>
