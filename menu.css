@@ -140,7 +140,7 @@ footer img{object-fit:contain;border-radius:50%;background:#fbf9f3;padding:5px}
 .menu-unavailable{display:block;padding:20px;border:1px solid #d4c28f;border-radius:12px;background:#fff8e7;color:#123e30;line-height:1.6}
 .menu-unavailable a{text-decoration:underline}
 
-/* A single visit panel: directions, live map and the restaurant illustration. */
+/* A single visit panel with a native illustrated local guide. */
 .visit{display:block;padding:34px 2.8% 0;text-align:start;background:var(--cream)}
 .visit-inner{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr) minmax(0,.8fr);align-items:center;gap:28px;max-width:1400px;margin:0 auto;padding:28px 30px 0;border:1px solid #ded6be;border-bottom:0;border-radius:26px 26px 0 0;background:linear-gradient(120deg,#faf7ee,#f2eddc 65%,#f7f3e8)}
 .visit-copy{min-width:0;padding:8px 0 32px}
@@ -155,11 +155,16 @@ footer img{object-fit:contain;border-radius:50%;background:#fbf9f3;padding:5px}
 .visit-map-heading strong{font-size:15px;font-weight:600;white-space:nowrap}
 .visit-map-heading a{font-size:13px;white-space:nowrap;color:#5d6854}
 .visit-map-heading a:hover{text-decoration:underline;text-underline-offset:3px}
-.visit-map iframe{display:block;width:100%;height:246px;border:0;background:#e9e8df}
+.visit-sketch{display:block;outline-offset:-3px}
+.visit-sketch-svg{display:block;width:100%;height:auto;font-family:'Barlow Semi Condensed',Arial,sans-serif;direction:ltr}
+.visit-map-label{font-size:13px;color:#6a735c}
+.visit-map-caption{display:block;padding:11px 14px 12px;text-align:center;color:#36513d;font-size:15px;line-height:1.45;background:#f5edda;border-top:1px solid #ded6be}
+.visit-sketch:hover .visit-map-caption{background:#eee3c9}
+[dir=rtl] .visit-map-caption{font-family:'Noto Sans Arabic',Tahoma,Arial,sans-serif;font-size:13px;line-height:1.7}
 .visit-illustration{width:100%;max-width:300px;aspect-ratio:1015/1086;align-self:end;justify-self:center;overflow:hidden;direction:ltr;margin-bottom:-1px}
 .visit-illustration img{display:block;width:142.66%;max-width:none;height:auto;margin-left:-21.28%}
-@media(min-width:701px) and (max-width:1100px){.visit-inner{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:18px 32px;padding:26px 28px 0;max-width:900px}.visit-copy{grid-column:1;grid-row:1;padding:0}.visit-illustration{grid-column:2;grid-row:1;max-width:235px;align-self:center}.visit-map{grid-column:1/-1;grid-row:2;margin-bottom:27px}.visit-map iframe{height:235px}}
-@media(max-width:700px){.visit{padding:25px 13px 0}.visit-inner{grid-template-columns:minmax(0,1fr);gap:0;max-width:480px;padding:25px 18px 0;border-radius:21px 21px 0 0}.visit-copy{text-align:center;padding:0 0 23px}.visit h2{font-size:29px;margin-bottom:14px}.visit p{font-size:17px;margin:8px auto}.visit .visit-actions{justify-content:center;margin-top:19px}.visit-map{margin-bottom:21px}.visit-map iframe{height:220px}.visit-map-heading{padding:10px 11px;gap:8px}.visit-map-heading strong{font-size:14px}.visit-map-heading a{font-size:12px}.visit-illustration{max-width:210px;justify-self:center}}
+@media(min-width:701px) and (max-width:1100px){.visit-inner{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:18px 32px;padding:26px 28px 0;max-width:900px}.visit-copy{grid-column:1;grid-row:1;padding:0}.visit-illustration{grid-column:2;grid-row:1;max-width:235px;align-self:center}.visit-map{grid-column:1/-1;grid-row:2;margin-bottom:27px}.visit-sketch-svg{max-height:330px}}
+@media(max-width:700px){.visit{padding:25px 13px 0}.visit-inner{grid-template-columns:minmax(0,1fr);gap:0;max-width:480px;padding:25px 18px 0;border-radius:21px 21px 0 0}.visit-copy{text-align:center;padding:0 0 23px}.visit h2{font-size:29px;margin-bottom:14px}.visit p{font-size:17px;margin:8px auto}.visit .visit-actions{justify-content:center;margin-top:19px}.visit-map{margin-bottom:21px}.visit-map-heading{padding:10px 11px;gap:8px}.visit-map-heading strong{font-size:14px}.visit-map-heading a{font-size:12px}.visit-illustration{max-width:210px;justify-self:center}}
 
 
 
