@@ -42,7 +42,7 @@ const restaurantPhotos = {
  "Falafel Porsiyon": "assets/platter-cutouts/falafel-porsiyon.webp",
  "Bakla Tabağı": "assets/platter-cutouts/bakla.webp",
  "Yoğurtlu Bakla Tabağı": "assets/platter-cutouts/bakla.webp",
- "Patlıcanlı Fatte": "assets/products/ys-68085836.jpg",
+ "Patlıcanlı Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
  "Tereyağında Kuruyemişli Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
  "Patatesli Falafel Dürüm": "assets/wrap-cutouts/wraps.webp",
  "Ispanaklı Sembusek (4 Adet)": "assets/side-cutouts/sides.webp",
@@ -340,8 +340,9 @@ function drinkProductVisual(item){
  return `<svg class="drink-product" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><defs><filter id="${shadowId}" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="13"/></filter></defs><ellipse cx="500" cy="914" rx="${Math.max(58,width*.34)}" ry="15" fill="#43331d" opacity=".10" filter="url(#${shadowId})"/><svg x="${x}" y="${y}" width="${width}" height="${height}" viewBox="${product.crop.join(' ')}" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="${escapeHtml(product.source)}" width="${product.width}" height="${product.height}"/></svg></svg>`;
 }
 
-// The approved fatte bowls share one frame; Patlıcanlı Fatte stays unchanged.
+// All fatte bowls share the same cutout frame.
 const fattePhotoCrops={
+ "Patlıcanlı Fatte":{width:1536,height:1024,crop:[0,104,768,768]},
  "Tereyağlı Fatte":{width:1536,height:1024,crop:[0,104,768,768]},
  "Tereyağında Kuruyemişli Fatte":{width:1536,height:1024,crop:[768,104,768,768]},
  "Kavurmalı Fatte":{width:1254,height:1254,crop:[50,50,1150,1150]}
