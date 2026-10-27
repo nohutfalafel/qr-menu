@@ -140,17 +140,27 @@ footer img{object-fit:contain;border-radius:50%;background:#fbf9f3;padding:5px}
 .menu-unavailable{display:block;padding:20px;border:1px solid #d4c28f;border-radius:12px;background:#fff8e7;color:#123e30;line-height:1.6}
 .menu-unavailable a{text-decoration:underline}
 
-/* Keep the storefront grounded at the footer and the visit details nearby. */
-.visit{display:block;padding:0 28px;text-align:start;background:var(--cream)}
-.visit-inner{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.85fr);align-items:center;gap:40px;max-width:1020px;margin:0 auto}
-.visit-copy{min-width:0;padding:46px 0 52px}
-.visit h2{font-size:clamp(30px,3.2vw,42px);line-height:1.16;margin:0 0 18px}
-.visit p{max-width:38ch;font-size:19px;line-height:1.55;margin:9px 0}
-.visit .visit-actions{justify-content:flex-start;flex-wrap:wrap;gap:12px;margin-top:24px}
-.visit-actions a{padding:12px 23px}
-.visit-illustration{width:100%;max-width:360px;aspect-ratio:1015/1086;align-self:end;justify-self:end;overflow:hidden;direction:ltr;margin-bottom:-1px}
+/* A single visit panel: directions, live map and the restaurant illustration. */
+.visit{display:block;padding:34px 2.8% 0;text-align:start;background:var(--cream)}
+.visit-inner{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr) minmax(0,.8fr);align-items:center;gap:28px;max-width:1400px;margin:0 auto;padding:28px 30px 0;border:1px solid #ded6be;border-bottom:0;border-radius:26px 26px 0 0;background:linear-gradient(120deg,#faf7ee,#f2eddc 65%,#f7f3e8)}
+.visit-copy{min-width:0;padding:8px 0 32px}
+.visit h2{font-size:clamp(29px,2.8vw,38px);line-height:1.2;margin:0 0 17px}
+.visit p{max-width:36ch;font-size:18px;line-height:1.55;margin:9px 0}
+.visit .visit-actions{justify-content:flex-start;flex-wrap:wrap;gap:10px;margin-top:23px}
+.visit-actions a{padding:11px 19px;white-space:nowrap}
+.visit-map{min-width:0;overflow:hidden;border:1px solid #d8d5c4;border-radius:17px;background:#fcfaf4;margin-bottom:28px;box-shadow:0 5px 17px #59492508}
+.visit-map-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:49px;padding:11px 14px;color:var(--green)}
+.visit-map-heading>span{display:flex;align-items:center;gap:8px;min-width:0}
+.visit-map-heading svg{width:14px;height:19px;flex:none;color:var(--gold)}
+.visit-map-heading strong{font-size:15px;font-weight:600;white-space:nowrap}
+.visit-map-heading a{font-size:13px;white-space:nowrap;color:#5d6854}
+.visit-map-heading a:hover{text-decoration:underline;text-underline-offset:3px}
+.visit-map iframe{display:block;width:100%;height:246px;border:0;background:#e9e8df}
+.visit-illustration{width:100%;max-width:300px;aspect-ratio:1015/1086;align-self:end;justify-self:center;overflow:hidden;direction:ltr;margin-bottom:-1px}
 .visit-illustration img{display:block;width:142.66%;max-width:none;height:auto;margin-left:-21.28%}
-@media(max-width:700px){.visit{padding:0 22px}.visit-inner{grid-template-columns:minmax(0,1fr);gap:0;max-width:460px}.visit-copy{padding:32px 0 20px;text-align:center}.visit h2{font-size:30px;margin-bottom:14px}.visit p{font-size:17px;margin:8px auto}.visit .visit-actions{justify-content:center;margin-top:20px}.visit-illustration{max-width:270px;justify-self:center}}
+@media(min-width:701px) and (max-width:1100px){.visit-inner{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:18px 32px;padding:26px 28px 0;max-width:900px}.visit-copy{grid-column:1;grid-row:1;padding:0}.visit-illustration{grid-column:2;grid-row:1;max-width:235px;align-self:center}.visit-map{grid-column:1/-1;grid-row:2;margin-bottom:27px}.visit-map iframe{height:235px}}
+@media(max-width:700px){.visit{padding:25px 13px 0}.visit-inner{grid-template-columns:minmax(0,1fr);gap:0;max-width:480px;padding:25px 18px 0;border-radius:21px 21px 0 0}.visit-copy{text-align:center;padding:0 0 23px}.visit h2{font-size:29px;margin-bottom:14px}.visit p{font-size:17px;margin:8px auto}.visit .visit-actions{justify-content:center;margin-top:19px}.visit-map{margin-bottom:21px}.visit-map iframe{height:220px}.visit-map-heading{padding:10px 11px;gap:8px}.visit-map-heading strong{font-size:14px}.visit-map-heading a{font-size:12px}.visit-illustration{max-width:210px;justify-self:center}}
+
 
 
 /* Approved wrap photographs already include their own soft food shadows. */
