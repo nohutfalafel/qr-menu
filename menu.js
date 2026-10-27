@@ -520,3 +520,5 @@ reviewsTrack.addEventListener('pointercancel',finishReviewDrag);
 reviewsTrack.addEventListener('pointerleave',()=>{if(reviewDrag&&!reviewDrag.active)reviewDrag=null;});
 let initialLanguage='tr';try{const saved=localStorage.getItem('nohut-lang');if(['tr','ar','en'].includes(saved))initialLanguage=saved;}catch(_){}
 setLanguage(initialLanguage);
+// Refresh the visible QR menu once Pages CMS prices have been fetched.
+window.addEventListener('nohut:prices-updated', renderMenu);

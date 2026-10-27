@@ -1,0 +1,258 @@
+# Pages CMS editor for Nohut Falafel. Content is saved to GitHub and served on GitHub Pages.
+# Sign in to https://app.pagescms.org with an authorized GitHub account.
+media:
+  input: assets/campaigns
+  output: assets/campaigns
+content:
+  - name: prices
+    label: Menü Fiyatları
+    type: file
+    path: cms/menu-prices.json
+    format: json
+    fields:
+      - name: wrap
+        label: Dürümler
+        type: object
+        list:
+          min: 5
+          max: 5
+          collapsible:
+            collapsed: true
+            summary: "{name} — {price} TL"
+        fields:
+          - name: name
+            label: Ürün adı (değiştirilemez)
+            type: string
+            readonly: true
+          - name: price
+            label: Fiyat (TL)
+            type: number
+            required: true
+            options:
+              min: 0
+      - name: plate
+        label: Porsiyonlar
+        type: object
+        list:
+          min: 6
+          max: 6
+          collapsible:
+            collapsed: true
+            summary: "{name} — {price} TL"
+        fields:
+          - name: name
+            label: Ürün adı (değiştirilemez)
+            type: string
+            readonly: true
+          - name: price
+            label: Fiyat (TL)
+            type: number
+            required: true
+            options:
+              min: 0
+      - name: fatte
+        label: Fatte
+        type: object
+        list:
+          min: 4
+          max: 4
+          collapsible:
+            collapsed: true
+            summary: "{name} — {price} TL"
+        fields:
+          - name: name
+            label: Ürün adı (değiştirilemez)
+            type: string
+            readonly: true
+          - name: price
+            label: Fiyat (TL)
+            type: number
+            required: true
+            options:
+              min: 0
+      - name: meze
+        label: Mezeler
+        type: object
+        list:
+          min: 7
+          max: 7
+          collapsible:
+            collapsed: true
+            summary: "{name} — {price} TL"
+        fields:
+          - name: name
+            label: Ürün adı (değiştirilemez)
+            type: string
+            readonly: true
+          - name: price
+            label: Fiyat (TL)
+            type: number
+            required: true
+            options:
+              min: 0
+      - name: side
+        label: Diğer
+        type: object
+        list:
+          min: 7
+          max: 7
+          collapsible:
+            collapsed: true
+            summary: "{name} — {price} TL"
+        fields:
+          - name: name
+            label: Ürün adı (değiştirilemez)
+            type: string
+            readonly: true
+          - name: price
+            label: Fiyat (TL)
+            type: number
+            required: true
+            options:
+              min: 0
+      - name: salad
+        label: Salatalar
+        type: object
+        list:
+          min: 3
+          max: 3
+          collapsible:
+            collapsed: true
+            summary: "{name} — {price} TL"
+        fields:
+          - name: name
+            label: Ürün adı (değiştirilemez)
+            type: string
+            readonly: true
+          - name: price
+            label: Fiyat (TL)
+            type: number
+            required: true
+            options:
+              min: 0
+      - name: dessert
+        label: Tatlı
+        type: object
+        list:
+          min: 2
+          max: 2
+          collapsible:
+            collapsed: true
+            summary: "{name} — {price} TL"
+        fields:
+          - name: name
+            label: Ürün adı (değiştirilemez)
+            type: string
+            readonly: true
+          - name: price
+            label: Fiyat (TL)
+            type: number
+            required: true
+            options:
+              min: 0
+      - name: drink
+        label: İçecekler
+        type: object
+        list:
+          min: 17
+          max: 17
+          collapsible:
+            collapsed: true
+            summary: "{name} — {price} TL"
+        fields:
+          - name: name
+            label: Ürün adı (değiştirilemez)
+            type: string
+            readonly: true
+          - name: price
+            label: Fiyat (TL)
+            type: number
+            required: true
+            options:
+              min: 0
+  - name: campaigns
+    label: Kampanyalar
+    type: file
+    path: cms/campaigns.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Kampanya kodu (benzersiz)
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: active
+        label: Yayında mı?
+        type: boolean
+        default: true
+      - name: price
+        label: Kampanya fiyatı (TL)
+        type: number
+        required: true
+        options:
+          min: 0
+      - name: startsAt
+        label: Başlangıç (isteğe bağlı, ISO 8601)
+        type: string
+        description: "Örn. 2026-11-01T11:00:00+03:00. Boş bırakırsanız hemen başlar."
+      - name: endsAt
+        label: Bitiş (isteğe bağlı, ISO 8601)
+        type: string
+        description: "Örn. 2026-11-30T21:00:00+03:00. Boş bırakırsanız devam eder."
+      - name: poster
+        label: Kampanya afişi
+        type: image
+        description: "Dikey kampanya afişi; JPEG, PNG veya WebP."
+      - name: thumbnail
+        label: Küçük kampanya görseli
+        type: image
+      - name: title
+        label: Kampanya başlığı
+        type: object
+        fields:
+          - name: tr
+            label: Türkçe
+            type: string
+            required: true
+          - name: en
+            label: English
+            type: string
+            required: true
+          - name: ar
+            label: العربية
+            type: string
+            required: true
+      - name: description
+        label: Kampanya açıklaması
+        type: object
+        fields:
+          - name: tr
+            label: Türkçe
+            type: text
+          - name: en
+            label: English
+            type: text
+          - name: ar
+            label: العربية
+            type: text
+      - name: items
+        label: Kampanyadaki ürünler
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{tr}"
+        fields:
+          - name: tr
+            label: Türkçe
+            type: string
+            required: true
+          - name: en
+            label: English
+            type: string
+            required: true
+          - name: ar
+            label: العربية
+            type: string
+            required: true
