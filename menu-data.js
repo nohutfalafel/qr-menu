@@ -56,22 +56,22 @@ const data=[
 
 const photoMap = {
   "Büyük Ayran": "assets/drinks/eker-large.png",
-  "Küçük Ayran": "assets/drinks/eker-small.png",
+  "Küçük Ayran": "assets/drinks/eker-small.webp",
   "Niğde Gazozu": "assets/drinks/nigde.jpg",
   "Çamlıca Gazoz": "assets/drinks/camlica.jpg",
   "Beypazarı Maden Suyu": "assets/drinks/beypazari-plain.png",
   "Beypazarı Mandalina Aromalı Maden Suyu": "assets/drinks/beypazari-mandarin.png",
   "Şişe Cola Turka": "assets/drinks/cola-bottle.jpg",
   "Kutu Cola Turka": "assets/drinks/cola-can.jpg",
-  "Doğanay Acılı Şalgam": "assets/drinks/doganay-spicy.png",
-  "Doğanay Acısız Şalgam": "assets/drinks/doganay-mild.png",
+  "Doğanay Acılı Şalgam": "assets/drinks/doganay-spicy.webp",
+  "Doğanay Acısız Şalgam": "assets/drinks/doganay-mild.webp",
   "Didi Limon Aromalı Soğuk Çay": "assets/drinks/didi-lemon.jpg",
   "Didi Çilek Aromalı Soğuk Çay": "assets/drinks/didi-strawberry.jpg",
   "Didi Şeftali Aromalı Soğuk Çay": "assets/drinks/didi-peach.jpg",
   "Sarıyer Portakal Aromalı Gazoz": "assets/drinks/sariyer-orange.jpg",
   "Sarıyer Mandalina Aromalı Gazoz": "assets/drinks/sariyer-mandarin.jpg",
   "Su": "assets/drinks/water.jpg",
-  "Çay": "assets/drinks/tea.png"
+  "Çay": "assets/drinks/tea.webp"
 };
 
 function pic(type,index){let seeds=[['#946129','#aa7938'],['#6a8b4e','#839f63'],['#b4873d','#dbad57']];let s=seeds[index%3];let green='<path d="M110 58q-14-24-3-35 18 10 13 31M115 54q13-27 28-21-4 23-28 25" fill="#558455"/>';let bowl='<ellipse cx="118" cy="95" rx="75" ry="57" fill="#a18c6b" opacity=".16"/><ellipse cx="110" cy="91" rx="75" ry="57" fill="#faf5e7" stroke="#d2c9b5" stroke-width="4"/>';
