@@ -52,6 +52,7 @@
  closeButton.addEventListener('click',()=>viewer.close());
  viewer.addEventListener('click',event=>{if(event.target===viewer)viewer.close();});
  viewer.addEventListener('close',()=>{document.documentElement.classList.remove('campaign-modal-open');if(returnFocus?.isConnected)returnFocus.focus();});
+ window.addEventListener('nohut:campaigns-updated', render);
  new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
  render();
  // Hide offers at their configured expiry even if the page stays open.
