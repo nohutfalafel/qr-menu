@@ -1,0 +1,48 @@
+
+name: Fix Nohut Falafel Menu Folders
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix_nohut_menu.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-folders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Move folders into assets
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p assets
+
+          for folder in \
+            dessert-cutouts drinks fonts \
+            meze-cutouts platter-cutouts \
+            products salad-cutouts \
+            side-cutouts wrap-cutouts
+          do
+            if [ -d "$folder" ]; then
+              if [ -e "assets/$folder" ]; then
+                echo "Destination already exists: $folder"
+                exit 1
+              fi
+              git mv "$folder" "assets/$folder"
+            fi
+          done
+
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Fix QR menu asset paths"
+            git push
+          fi
+ 
