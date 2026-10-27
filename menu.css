@@ -139,3 +139,11 @@ footer img{object-fit:contain;border-radius:50%;background:#fbf9f3;padding:5px}
 }
 .menu-unavailable{display:block;padding:20px;border:1px solid #d4c28f;border-radius:12px;background:#fff8e7;color:#123e30;line-height:1.6}
 .menu-unavailable a{text-decoration:underline}
+
+/* Isolated restaurant illustration beside the visit details. */
+.visit{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:center;gap:clamp(24px,4vw,64px);padding:30px max(4%,calc((100% - 1400px)/2));text-align:start}
+.visit-copy{min-width:0}
+.visit .visit-actions{justify-content:flex-start;flex-wrap:wrap}
+.visit-illustration{display:flex;align-items:center;justify-content:center;min-width:0;direction:ltr}
+.visit-illustration img{display:block;width:100%;max-width:350px;height:auto;object-fit:contain}
+@media(max-width:700px){.visit{grid-template-columns:minmax(0,1fr);gap:20px;padding:29px 18px;text-align:center}.visit .visit-actions{justify-content:center}.visit-illustration img{max-width:260px}}
