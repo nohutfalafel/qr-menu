@@ -130,4 +130,4 @@
 }
 
 /* Keep the original transparent logo clear in the footer. */
-footer img{object-fit:contain;border-radius:0}
+footer img{object-fit:contain;border-radius:50%;background:#fbf9f3;padding:5px}
