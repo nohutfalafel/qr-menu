@@ -24,7 +24,7 @@ const drinkOrder=Object.keys(referencePhotos);
 const drinkDisplayNames={'Büyük Ayran':['Eker Ayran (Büyük)','Eker Ayran (Large)'],'Küçük Ayran':['Eker Ayran (Küçük)','Eker Ayran (Small)'],'Doğanay Acılı Şalgam':['Doğanay Şalgam (Acı)','Doğanay Şalgam (Spicy)'],'Doğanay Acısız Şalgam':['Doğanay Şalgam (Acısız)','Doğanay Şalgam (Mild)']};
 const restaurantPhotos = {
  "Kavurmalı Fatte": "assets/platter-cutouts/kavurmali-fatte-20261027.webp",
- "Nohut Özel Tabağı": "assets/platter-cutouts/nohut-special-20261025.webp",
+ "Nohut Özel Tabağı": "assets/platter-cutouts/nohut-1-kibbe-2-sembusek-20261029.webp",
  "Şambali Tatlısı": "assets/dessert-cutouts/sambali-one-almond.webp",
  "Tahinli Muhallebi": "assets/dessert-cutouts/tahinli-muhallebi.webp",
  "Kıymalı Sembusek (4 Adet)": "assets/side-cutouts/sides.webp",
@@ -35,8 +35,8 @@ const restaurantPhotos = {
  "Sarma (6 Adet)": "assets/products/tgo-9295403_1738157981309.jpg",
  "Tereyağlı Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
  "Patates Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
- "Vegan Özel Tabağı": "assets/platter-cutouts/vegan-ozel.webp",
- "Beyrut Tabağı": "assets/platter-cutouts/nohut-ozel.webp",
+ "Vegan Özel Tabağı": "assets/platter-cutouts/vegan-2-sembusek-20261029.webp",
+ "Beyrut Tabağı": "assets/platter-cutouts/beyrut-1-sembusek-20261029.webp",
  "Kuruyemişli Humus": "assets/meze-cutouts/kuruyemisli-humus.webp",
  "Peynirli Sembusek (4 Adet)": "assets/side-cutouts/cheese-sembusek.webp",
  "Falafel Porsiyon": "assets/platter-cutouts/falafel-porsiyon.webp",
@@ -65,7 +65,7 @@ const restaurantPhotos = {
  "Su": "assets/drinks/water.jpg"
 };
 const mezePlateGeometry={"Sade Humus":{"width":1254,"height":1254,"matrix":[0.7312,-0.000248,-0.000248,0.739627,42.369389,42.922908]},"Kuruyemişli Humus":{"width":1254,"height":1254,"matrix":[0.719352,-0.000638,-0.000638,0.722961,41.809196,51.435731]},"Babagannuş":{"width":1254,"height":1254,"matrix":[0.710531,0.000526,0.000526,0.713243,54.855174,52.317941]},"Pancarlı Humus":{"width":1254,"height":1254,"matrix":[0.74633,0.001627,0.001627,0.754575,32.269832,27.221773]},"Mütebbel":{"width":1254,"height":1254,"matrix":[0.703334,0.000529,0.000529,0.70583,58.431362,52.554385]},"Muhammara":{"width":1254,"height":1254,"matrix":[0.757604,-0.002332,-0.002332,0.753512,25.043649,26.179502]}};
-const platterPlateGeometry={"Kavurmalı Fatte":{"width":1254,"height":1254,"matrix":[0.754717,0,0,0.754717,26.037736,31.037736]},"Nohut Özel Tabağı":{"width":1254,"height":1254,"matrix":[0.724138,0,0,0.724138,45.9655,45.9655]},"Beyrut Tabağı":{"width":1254,"height":1254,"matrix":[0.718182,-0.003145,-0.003145,0.712716,53.090195,57.978915]},"Vegan Özel Tabağı":{"width":1254,"height":1254,"matrix":[0.699812,-0.00037,-0.00037,0.702335,63.507687,61.131581]},"Falafel Porsiyon":{"width":1254,"height":1254,"matrix":[0.725014,0.002901,0.002901,0.718634,42.709828,40.724092]},"Bakla Tabağı":{"width":1254,"height":1254,"matrix":[0.712926,0.000184,0.000184,0.719855,53.095402,54.840502]},"Yoğurtlu Bakla Tabağı":{"width":1254,"height":1254,"matrix":[0.712926,0.000184,0.000184,0.719855,53.095402,54.840502]},"beyrutMain":{"width":1254,"height":1254,"matrix":[0.700855,-0.002523,-0.002523,0.705824,62.399929,66.824682]},"beyrutSalad":{"width":1254,"height":1254,"matrix":[0.686487,-0.000358,-0.000358,0.679426,70.923657,70.085503]}};
+const platterPlateGeometry={"Kavurmalı Fatte":{"width":1254,"height":1254,"matrix":[0.754717,0,0,0.754717,26.037736,31.037736]},"Nohut Özel Tabağı":{"width":1254,"height":1254,"matrix":[0.72,0,0,0.72,48.56,48.56]},"Beyrut Tabağı":{"width":1254,"height":1254,"matrix":[0.72,0,0,0.72,48.56,48.56]},"Vegan Özel Tabağı":{"width":1254,"height":1254,"matrix":[0.72,0,0,0.72,48.56,48.56]},"Falafel Porsiyon":{"width":1254,"height":1254,"matrix":[0.725014,0.002901,0.002901,0.718634,42.709828,40.724092]},"Bakla Tabağı":{"width":1254,"height":1254,"matrix":[0.712926,0.000184,0.000184,0.719855,53.095402,54.840502]},"Yoğurtlu Bakla Tabağı":{"width":1254,"height":1254,"matrix":[0.712926,0.000184,0.000184,0.719855,53.095402,54.840502]},"beyrutMain":{"width":1254,"height":1254,"matrix":[0.700855,-0.002523,-0.002523,0.705824,62.399929,66.824682]},"beyrutSalad":{"width":1254,"height":1254,"matrix":[0.686487,-0.000358,-0.000358,0.679426,70.923657,70.085503]}};
 function isCutoutPhoto(source){return /^assets\/(?:meze|platter|salad|side|wrap|dessert)-cutouts\//.test(source||"");}
 function plateImage(source,plate){return `<image href="${escapeHtml(source)}" width="${plate.width}" height="${plate.height}" transform="matrix(${plate.matrix.join(" ")})"/>`;}
 function menuName(item){
