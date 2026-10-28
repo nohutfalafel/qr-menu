@@ -40,7 +40,7 @@ const restaurantPhotos = {
  "Kuruyemişli Humus": "assets/meze-cutouts/kuruyemisli-humus.webp",
  "Peynirli Sembusek (4 Adet)": "assets/side-cutouts/cheese-sembusek.webp",
  "Falafel Porsiyon": "assets/platter-cutouts/falafel-porsiyon.webp",
- "Bakla Tabağı": "assets/platter-cutouts/bakla.webp",
+ "Bakla Tabağı": "assets/platter-cutouts/bakla-no-yogurt-20261029.webp",
  "Yoğurtlu Bakla Tabağı": "assets/platter-cutouts/bakla.webp",
  "Patlıcanlı Fatte": "assets/platter-cutouts/fatte-selected-three-20261028.webp",
  "Tereyağında Kuruyemişli Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
