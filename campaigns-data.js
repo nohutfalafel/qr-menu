@@ -29,8 +29,8 @@ window.nohutCampaigns = [
     "startsAt": null,
     "endsAt": null,
     "price": 150,
-    "poster": "assets/campaigns/leyali-lubnan-poster.webp",
-    "thumbnail": "assets/campaigns/leyali-lubnan-poster.webp",
+    "poster": "assets/campaigns/lubnan-geceleri-poster.webp",
+    "thumbnail": "assets/campaigns/lubnan-geceleri-poster.webp",
     "eyebrow": {
       "tr": "YENİ TATLI",
       "ar": "حلوى جديدة",
