@@ -141,6 +141,10 @@
   ],
   "dessert": [
     {
+      "name": "Lübnan Geceleri",
+      "price": 150
+    },
+    {
       "name": "Şambali Tatlısı",
       "price": 70
     },

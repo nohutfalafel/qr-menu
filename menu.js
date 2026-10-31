@@ -27,6 +27,7 @@ const restaurantPhotos = {
  "Nohut Özel Tabağı": "assets/platter-cutouts/nohut-1-kibbe-2-sembusek-20261029.webp",
  "Şambali Tatlısı": "assets/dessert-cutouts/sambali-one-almond.webp",
  "Tahinli Muhallebi": "assets/dessert-cutouts/tahinli-muhallebi.webp",
+ "Lübnan Geceleri": "assets/dessert-cutouts/lubnan-geceleri.svg",
  "Kıymalı Sembusek (4 Adet)": "assets/side-cutouts/sides.webp",
  "Nohut Özel Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
  "Falafel Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
