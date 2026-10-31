@@ -434,7 +434,7 @@ function renderMenu(){
   const categoryTag=searching?`<p class="dish-category">${escapeHtml(categoryLabel)}</p>`:'';
   const price=item[3]==null?'':`${escapeHtml(item[3])} TL`;
   const desc=item[0]==='drink'?'':`<p class="desc">${escapeHtml(menuDescription(item))}</p>`;
-  return `<article class="dish"><div class="art${isMenuCutout(item)?' cutout-art':''}">${productVisual(item,index)}</div><div class="dish-text">${categoryTag}<h3 class="name">${escapeHtml(displayName)}</h3><span class="price" dir="ltr">${price}</span>${desc}</div></article>`;
+  return `<article class="dish"><div class="art${isMenuCutout(item)?' cutout-art':''}">${productVisual(item,index)}</div><div class="dish-text">${categoryTag}<h3 class="name">${escapeHtml(displayName)}</h3>${item[1]==='Leyali Lübnan'?`<span class="dish-new">${lang==='ar'?'جديد':lang==='en'?'NEW':'YENİ'}</span>`:''}<span class="price" dir="ltr">${price}</span>${desc}</div></article>`;
  }).join('');
  deferSvgFoodPhotos();
  byId('grid').querySelectorAll('img').forEach(image=>image.addEventListener('error',()=>{image.hidden=true;image.nextElementSibling.hidden=false;},{once:true}));
