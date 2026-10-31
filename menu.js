@@ -37,7 +37,7 @@ const restaurantPhotos = {
  "Tereyağlı Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
  "Patates Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
  "Vegan Özel Tabağı": "assets/platter-cutouts/vegan-2-sembusek-20261029.webp",
- "Beyrut Tabağı": "assets/platter-cutouts/beyrut-1-sembusek-20261029.webp",
+ "Beyrut Tabağı": "assets/platter-cutouts/beyrut-2-kiymali-sembusek.webp",
  "Kuruyemişli Humus": "assets/meze-cutouts/kuruyemisli-humus.webp",
  "Peynirli Sembusek (4 Adet)": "assets/side-cutouts/cheese-sembusek.webp",
  "Falafel Porsiyon": "assets/platter-cutouts/falafel-porsiyon.webp",

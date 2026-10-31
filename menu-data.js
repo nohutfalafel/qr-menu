@@ -9,7 +9,7 @@ const data=[
 ['plate','Falafel Porsiyon','Falafel Platter',200,'6 adet falafel, humus, babagannuş, mütebbel','Six falafel pieces served with hummus, baba ghanoush and mutabbal'],
 ['plate','Vegan Özel Tabağı','Vegan Special Platter',320,'4 falafel, 2 ıspanaklı sembusek, 3 sarma, babagannuş, humus','Four falafel pieces, two spinach sambousek, three stuffed vine leaves, baba ghanoush and hummus'],
 ['plate','Nohut Özel Tabağı','Nohut Special Platter',350,'4 falafel, 1 kibbe, 2 ıspanaklı sembusek, humus','Four falafel pieces, one kibbeh, two spinach sambousek and hummus'],
-['plate','Beyrut Tabağı','Beirut Platter',300,'4 falafel, 1 kıymalı sembusek, humus','Four falafel pieces, one meat sambousek and hummus'],
+['plate','Beyrut Tabağı','Beirut Platter',300,'4 falafel, 2 kıymalı sembusek, humus','Four falafel pieces, two meat sambousek and hummus'],
 ['plate','Bakla Tabağı','Fava Beans with Olive Oil',160,'Bakla, sarımsak, zeytinyağı, maydanoz, domates','Fava beans with garlic, olive oil, parsley and tomato'],
 ['plate','Yoğurtlu Bakla Tabağı','Fava Beans with Yogurt',180,'Bakla ve yoğurt','Fava beans served with yogurt'],
 ['fatte','Tereyağlı Fatte','Chickpea Fatteh with Butter',250,'Tahinli sarımsaklı yoğurt, haşlanmış nohut ve kızarmış Lübnan ekmeği','Chickpeas and crispy Lebanese bread with garlic-tahini yogurt and butter'],
