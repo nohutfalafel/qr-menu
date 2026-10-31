@@ -27,7 +27,7 @@ const restaurantPhotos = {
  "Nohut Özel Tabağı": "assets/platter-cutouts/nohut-1-kibbe-2-sembusek-20261029.webp",
  "Şambali Tatlısı": "assets/dessert-cutouts/sambali-one-almond.webp",
  "Tahinli Muhallebi": "assets/dessert-cutouts/tahinli-muhallebi.webp",
- "Layali Lübnan": "assets/dessert-cutouts/lubnan-geceleri-top.webp",
+ "Leyali Lübnan": "assets/dessert-cutouts/lubnan-geceleri-top.webp",
  "Kıymalı Sembusek (4 Adet)": "assets/side-cutouts/sides.webp",
  "Nohut Özel Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
  "Falafel Dürüm": "assets/wrap-cutouts/wraps-approved-20261028.webp",
@@ -349,7 +349,7 @@ const fattePhotoCrops={
  "Kavurmalı Fatte":{width:1254,height:1254,crop:[50,50,1150,1150]}
 };
 function productVisual(item,index){
- if(item[1]==='Layali Lübnan')return `<img class="real-dish-image meze-cutout" src="assets/dessert-cutouts/lubnan-geceleri-poster-bowl.webp" alt="${escapeHtml(menuName(item))}" loading="lazy" decoding="async" style="object-fit:contain;padding:10px;position:absolute;inset:0">`;
+ if(item[1]==='Leyali Lübnan')return `<img class="real-dish-image meze-cutout" src="assets/dessert-cutouts/lubnan-geceleri-poster-bowl.webp" alt="${escapeHtml(menuName(item))}" loading="lazy" decoding="async" style="object-fit:contain;padding:10px;position:absolute;inset:0">`;
  const fatte=fattePhotoCrops[item[1]];
  if(fatte)return `<svg class="meze-cutout" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><svg x="65" y="65" width="870" height="870" viewBox="${fatte.crop.join(' ')}" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="${escapeHtml(restaurantPhotos[item[1]])}" width="${fatte.width}" height="${fatte.height}"/></svg></svg>`;
  if(item[1]==='Şambali Tatlısı')return `<svg class="meze-cutout" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><image href="${escapeHtml(restaurantPhotos[item[1]])}" width="1254" height="1254" transform="matrix(0.69536 0 0 0.71795 61.22 44.10)"/></svg>`;
