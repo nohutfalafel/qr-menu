@@ -29,15 +29,15 @@ window.nohutCampaigns = [
     "startsAt": null,
     "endsAt": null,
     "price": 150,
-    "poster": "assets/campaigns/lubnan-geceleri-poster.webp",
-    "thumbnail": "assets/campaigns/lubnan-geceleri-poster.webp",
+    "poster": "assets/campaigns/layali-poster-v2.webp",
+    "thumbnail": "assets/campaigns/layali-poster-v2.webp",
     "eyebrow": {
       "tr": "YENİ TATLI",
       "ar": "حلوى جديدة",
       "en": "NEW DESSERT"
     },
     "title": {
-      "tr": "Leyali Lübnan",
+      "tr": "Layali Lübnan",
       "ar": "ليالي لبنان",
       "en": "Lebanese Nights"
     },
