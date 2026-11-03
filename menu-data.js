@@ -1,6 +1,7 @@
 // Original Turkish menu names, prices and descriptions are preserved. English guest-facing copy has been refined.
 const categories=[['all','Tümü','All'],['wrap','Dürümler','Wraps'],['plate','Porsiyonlar','Platters'],['fatte','Fatte','Fatteh'],['meze','Mezeler','Appetizers'],['side','Diğer','Sides'],['salad','Salatalar','Salads'],['dessert','Tatlı','Desserts'],['drink','İçecekler','Drinks']];
 const data=[
+['wrap','Vegan Dürüm','Vegan Wrap',240,"Falafel, ıspanaklı humus, marul, domates, salatalık, nane, maydanoz","Falafel, spinach hummus, lettuce, tomato, fresh cucumber, mint and parsley"],
 ['wrap','Falafel Dürüm','Falafel Wrap',140,"Falafel, humus, marul, domates, salatalık, nane, maydanoz, tarator sosu","Falafel, hummus, lettuce, tomato, fresh cucumber, mint, parsley and tarator sauce"],
 ['wrap','Patates Dürüm','Fries Wrap',135,"Kızartılmış patates, humus, marul, domates, salatalık, nane, maydanoz, tarator sosu","Crispy fries, hummus, lettuce, tomato, fresh cucumber, mint, parsley and tarator sauce"],
 ['wrap','Nohut Özel Dürüm','Nohut Special Wrap',185,"Kızartılmış patlıcan, falafel, humus, mütebbel, marul, domates, salatalık, nane, maydanoz, tarator sosu","Falafel, fried eggplant, hummus, mutabbal, lettuce, tomato, fresh cucumber, mint, parsley and tarator sauce"],
