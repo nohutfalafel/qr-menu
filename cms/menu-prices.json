@@ -1,6 +1,10 @@
 {
   "wrap": [
     {
+      "name": "Vegan Dürüm",
+      "price": 240
+    },
+    {
       "name": "Falafel Dürüm",
       "price": 140
     },
