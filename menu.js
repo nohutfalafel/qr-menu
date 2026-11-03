@@ -29,13 +29,13 @@ const restaurantPhotos = {
  "Tahinli Muhallebi": "assets/dessert-cutouts/tahinli-muhallebi.webp",
  "Layali Lübnan": "assets/dessert-cutouts/lubnan-geceleri-top.webp",
  "Kıymalı Sembusek (4 Adet)": "assets/side-cutouts/sides.webp",
- "Nohut Özel Dürüm": "assets/wrap-cutouts/wraps-no-parsley.webp",
- "Falafel Dürüm": "assets/wrap-cutouts/wraps-no-parsley.webp",
- "Patatesli Patlıcanlı Falafel Dürüm": "assets/wrap-cutouts/wraps-no-parsley.webp",
+ "Nohut Özel Dürüm": "assets/wrap-cutouts/wraps-transparent.webp",
+ "Falafel Dürüm": "assets/wrap-cutouts/wraps-transparent.webp",
+ "Patatesli Patlıcanlı Falafel Dürüm": "assets/wrap-cutouts/wraps-transparent.webp",
  "Kibbe (3 Adet)": "assets/products/kibbe-6003492c.jpg",
  "Sarma (6 Adet)": "assets/products/tgo-9295403_1738157981309.jpg",
  "Tereyağlı Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
- "Patates Dürüm": "assets/wrap-cutouts/wraps-no-parsley.webp",
+ "Patates Dürüm": "assets/wrap-cutouts/wraps-transparent.webp",
  "Vegan Özel Tabağı": "assets/platter-cutouts/vegan-2-sembusek-20261029.webp",
  "Beyrut Tabağı": "assets/platter-cutouts/beyrut-2-kiymali-sembusek.webp",
  "Kuruyemişli Humus": "assets/meze-cutouts/kuruyemisli-humus.webp",
@@ -45,7 +45,7 @@ const restaurantPhotos = {
  "Yoğurtlu Bakla Tabağı": "assets/platter-cutouts/bakla.webp",
  "Patlıcanlı Fatte": "assets/platter-cutouts/fatte-selected-three-20261028.webp",
  "Tereyağında Kuruyemişli Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",
- "Patatesli Falafel Dürüm": "assets/wrap-cutouts/wraps-no-parsley.webp",
+ "Patatesli Falafel Dürüm": "assets/wrap-cutouts/wraps-transparent.webp",
  "Ispanaklı Sembusek (4 Adet)": "assets/side-cutouts/sides.webp",
  "Patates Kızartması": "assets/side-cutouts/sides.webp",
  "Sade Humus": "assets/meze-cutouts/sade-humus-top.webp",
@@ -349,7 +349,7 @@ const fattePhotoCrops={
  "Kavurmalı Fatte":{width:1254,height:1254,crop:[50,50,1150,1150]}
 };
 function productVisual(item,index){
- if(item[1]==='Vegan Dürüm')return `<svg class="meze-cutout wrap-photo" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><svg x="65" y="210" width="870" height="580" viewBox="0 0 800 533" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="assets/wrap-cutouts/vegan-durum-no-parsley.webp" width="800" height="533"/></svg></svg>`;
+ if(item[1]==='Vegan Dürüm')return `<svg class="meze-cutout wrap-photo" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><svg x="65" y="210" width="870" height="580" viewBox="0 0 800 533" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="assets/wrap-cutouts/vegan-transparent.webp" width="800" height="533"/></svg></svg>`;
  if(item[1]==='Layali Lübnan')return `<img class="real-dish-image meze-cutout" src="assets/dessert-cutouts/lubnan-geceleri-poster-bowl.webp" alt="${escapeHtml(menuName(item))}" loading="lazy" decoding="async" style="object-fit:contain;padding:10px;position:absolute;inset:0">`;
  const fatte=fattePhotoCrops[item[1]];
  if(fatte)return `<svg class="meze-cutout" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><svg x="65" y="65" width="870" height="870" viewBox="${fatte.crop.join(' ')}" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="${escapeHtml(restaurantPhotos[item[1]])}" width="${fatte.width}" height="${fatte.height}"/></svg></svg>`;
