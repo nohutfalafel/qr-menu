@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nohut Falafel — 2'li Menü A3 Afiş</title>
+<meta name="description" content="Nohut Falafel 2'li Menü: 2 falafel dürüm ve 2 Eker ayran. Nakit 290 TL, kart 315 TL.">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#deddd6;color:#123c2e;font-family:Arial,Helvetica,sans-serif}
+.printbar{margin:16px auto;max-width:730px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.printbar button{border:0;border-radius:100px;background:#123c2e;color:#fff;padding:13px 20px;font-weight:700;font-size:15px;cursor:pointer}
+.printbar span{font-size:13px;font-weight:600}
+.sheet{width:min(96vw,730px);margin:0 auto 32px;box-shadow:0 14px 44px #123c2e24}
+.sheet svg{display:block;width:100%;height:auto}
+@page{size:A3 portrait;margin:0}
+@media print{
+ html,body{margin:0;width:297mm;height:420mm;background:white!important}
+ .printbar{display:none!important}.sheet{margin:0;width:297mm!important;height:420mm!important;box-shadow:none!important;page-break-inside:avoid}
+ .sheet svg{width:297mm;height:420mm}
+ *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
+</style></head><body>
+<div class="printbar"><span>NOHUT FALAFEL · A3 (29,7 × 42 cm)</span><button onclick="window.print()">A3 PDF / Yazdır</button></div>
+<div class="sheet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1055 1491" role="img" aria-label="Nohut Falafel 2'li Menü. 2 Falafel Dürüm ve 2 Eker Ayran. Nakit 290 lira, kart 315 lira.">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c382a"/><stop offset=".58" stop-color="#11513c"/><stop offset="1" stop-color="#083224"/></linearGradient>
+ <linearGradient id="cream" x1="0" y1="0" x2="1" y2=".5"><stop stop-color="#f9eed5"/><stop offset=".52" stop-color="#fff9ed"/><stop offset="1" stop-color="#f1dfb9"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dfb45b"/><stop offset=".5" stop-color="#f9e3a2"/><stop offset="1" stop-color="#be8b38"/></linearGradient>
+ <clipPath id="wrapWindow"><rect x="76" y="655" width="520" height="334" rx="20"/></clipPath>
+ <clipPath id="cupA"><path d="M662 691 Q768 684 874 691 L875 705 L858 724 L846 955 Q846 981 824 981 H704 Q691 981 690 963 L676 724 L660 705 Z"/></clipPath>
+ <clipPath id="cupB"><path d="M784 689 Q888 685 987 689 L988 702 L975 721 L960 950 Q959 973 942 973 H824 Q816 973 813 952 L797 721 L784 703 Z"/></clipPath>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="11"/></filter>
+</defs>
+<rect width="1055" height="1491" fill="url(#bg)"/>
+<!-- Header and original restaurant logo -->
+<path d="M0 0 H1055 V242 C860 303 741 273 528 290 C306 309 198 296 0 243 Z" fill="url(#cream)"/>
+<path d="M0 243 C198 295 307 309 528 290 C742 273 861 304 1055 242" fill="none" stroke="#d7a849" stroke-width="9"/>
+<circle cx="528" cy="124" r="118" fill="#fef7e9" stroke="#cda04c" stroke-width="7"/>
+<image href="assets/nohut-logo.webp" x="424" y="20" width="208" height="208" preserveAspectRatio="xMidYMid meet"/>
+<text x="528" y="270" text-anchor="middle" fill="#154533" font-size="22" font-weight="700" letter-spacing="4">TAZE · DOĞAL · LEZZETLİ</text>
+<!-- Title -->
+<text x="528" y="448" text-anchor="middle" fill="#fff5de" font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="141" font-weight="900" textLength="889" lengthAdjust="spacingAndGlyphs">2’Lİ MENÜ</text>
+<path d="M264 478 Q528 453 792 478" stroke="#e4b74a" stroke-width="10" fill="none" stroke-linecap="round"/>
+<rect x="69" y="508" width="917" height="100" rx="50" fill="url(#cream)" stroke="#d9aa52" stroke-width="5"/>
+<text x="528" y="572" text-anchor="middle" fill="#0b3829" font-family="Arial,Helvetica,sans-serif" font-size="48" font-weight="900" textLength="828" lengthAdjust="spacingAndGlyphs">2 FALAFEL DÜRÜM + 2 AYRAN</text>
+<!-- Food showcase -->
+<rect x="52" y="635" width="955" height="455" rx="43" fill="#f5ead2" stroke="#dfba6d" stroke-width="7"/>
+<rect x="67" y="648" width="925" height="430" rx="32" fill="#fffaf0"/>
+<!-- exact approved Falafel Dürüm photo from GitHub: first top-left photograph -->
+<image href="assets/wrap-cutouts/wraps-approved-20261028.webp" x="78" y="576" width="1460" height="974" preserveAspectRatio="none" clip-path="url(#wrapWindow)"/>
+<!-- exact Eker small Ayran product photos from GitHub -->
+<ellipse cx="834" cy="995" rx="176" ry="27" fill="#6b6b56" opacity=".18" filter="url(#shadow)"/>
+<image href="assets/drinks/eker-small.webp" x="706" y="651" width="355" height="355" clip-path="url(#cupB)"/>
+<image href="assets/drinks/eker-small.webp" x="580" y="650" width="368" height="368" clip-path="url(#cupA)"/>
+<rect x="95" y="1000" width="470" height="64" rx="28" fill="#0f4935"/>
+<text x="330" y="1041" text-anchor="middle" fill="#fff8e8" font-size="32" font-weight="800">FALAFEL DÜRÜM</text>
+<rect x="650" y="1000" width="318" height="64" rx="28" fill="#0f4935"/>
+<text x="809" y="1041" text-anchor="middle" fill="#fff8e8" font-size="32" font-weight="800">EKER AYRAN</text>
+<!-- Cash and card pricing: two independently labelled final totals -->
+<rect x="65" y="1125" width="448" height="234" rx="49" fill="url(#cream)" stroke="#dfb15c" stroke-width="10"/>
+<rect x="542" y="1125" width="448" height="234" rx="49" fill="#0d422f" stroke="#dfb15c" stroke-width="10"/>
+<text x="289" y="1196" text-anchor="middle" fill="#0a3929" font-size="58" font-weight="900" letter-spacing="1">NAKİT</text>
+<text x="766" y="1196" text-anchor="middle" fill="#fff7e5" font-size="58" font-weight="900" letter-spacing="1">KART</text>
+<text x="289" y="1321" text-anchor="middle" fill="#0a3929" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="137" textLength="355" lengthAdjust="spacingAndGlyphs">290 ₺</text>
+<text x="766" y="1321" text-anchor="middle" fill="#fff7e5" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="137" textLength="355" lengthAdjust="spacingAndGlyphs">315 ₺</text>
+<path d="M64 1408 H227 M826 1408 H990" stroke="#d8aa50" stroke-width="5" stroke-linecap="round"/>
+<text x="528" y="1421" text-anchor="middle" font-size="31" font-weight="800" fill="#fff4d6" letter-spacing="4">NOHUT FALAFEL</text>
+<text x="528" y="1461" text-anchor="middle" font-size="22" fill="#e7c783" letter-spacing="4">SERDİVAN · SAKARYA</text>
+</svg></div></body></html>
