@@ -349,6 +349,7 @@ const fattePhotoCrops={
  "Kavurmalı Fatte":{width:1254,height:1254,crop:[50,50,1150,1150]}
 };
 function productVisual(item,index){
+ if(item[1]==='Vegan Dürüm')return `<img class="real-dish-image" src="assets/wrap-cutouts/vegan-durum-20261103.webp" alt="${escapeHtml(menuName(item))}" loading="lazy" decoding="async" style="object-fit:contain;position:absolute;inset:0">`;
  if(item[1]==='Layali Lübnan')return `<img class="real-dish-image meze-cutout" src="assets/dessert-cutouts/lubnan-geceleri-poster-bowl.webp" alt="${escapeHtml(menuName(item))}" loading="lazy" decoding="async" style="object-fit:contain;padding:10px;position:absolute;inset:0">`;
  const fatte=fattePhotoCrops[item[1]];
  if(fatte)return `<svg class="meze-cutout" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><svg x="65" y="65" width="870" height="870" viewBox="${fatte.crop.join(' ')}" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="${escapeHtml(restaurantPhotos[item[1]])}" width="${fatte.width}" height="${fatte.height}"/></svg></svg>`;
