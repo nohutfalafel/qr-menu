@@ -53,7 +53,7 @@
 .campaigns-heading{margin-bottom:11px}
 .campaigns-list{
  display:grid;
- grid-template-columns:repeat(2,minmax(0,1fr));
+ grid-template-columns:repeat(auto-fit,minmax(max(270px,calc((100% - 24px)/3)),1fr));
  align-items:stretch;
  gap:12px;
 }
@@ -92,6 +92,7 @@
 .campaign-price{font-size:30px;letter-spacing:-.5px}
 .campaign-price small{font-size:15px;margin-inline-start:4px}
 .campaign-detail-button{min-height:36px;padding:7px 12px;font-size:13px}
+.campaigns-pagination{display:none}
 [dir=rtl] .campaign-title{font-size:22px;line-height:1.38}
 [dir=rtl] .campaign-items li{font-size:13px;line-height:1.6}
 [dir=rtl] .campaign-description{font-size:13px;line-height:1.5}
@@ -110,6 +111,9 @@
  .campaign-card{scroll-snap-align:start}
  .campaigns-list::-webkit-scrollbar{height:5px}
  .campaigns-list::-webkit-scrollbar-thumb{background:#c6bb98;border-radius:5px}
+ .campaigns-pagination:not(:empty){display:flex;justify-content:center;gap:6px;margin-top:4px}
+ .campaigns-pagination button{min-width:36px;min-height:36px;border:1px solid #c6bb98;border-radius:50%;background:#fcfaf4;color:var(--green);font-size:15px;font-weight:700;cursor:pointer}
+ .campaigns-pagination button[aria-current="true"]{background:var(--green);border-color:var(--green);color:#fff}
 }
 @media(max-width:650px){
  .campaigns{margin-bottom:16px}

@@ -1,5 +1,41 @@
 [
   {
+    "id": "2li-menu-300",
+    "active": true,
+    "startsAt": null,
+    "endsAt": "2026-12-01T00:00:00+03:00",
+    "price": 300,
+    "poster": "assets/campaigns/2li-menu-300.webp",
+    "thumbnail": "assets/campaigns/2li-menu-300-thumb.webp",
+    "eyebrow": {
+      "tr": "KASIM AYINA ÖZEL",
+      "ar": "عرض نوفمبر",
+      "en": "NOVEMBER SPECIAL"
+    },
+    "title": {
+      "tr": "2’li Menü",
+      "ar": "وجبة لشخصين",
+      "en": "Combo for Two"
+    },
+    "description": {
+      "tr": "İki kişilik falafel menüsü.",
+      "ar": "وجبة فلافل لشخصين.",
+      "en": "A falafel combo for two."
+    },
+    "items": [
+      {
+        "tr": "2 Falafel Dürüm",
+        "ar": "٢ ساندويتش فلافل",
+        "en": "2 falafel wraps"
+      },
+      {
+        "tr": "2 Eker Ayran",
+        "ar": "٢ عيران إيكر",
+        "en": "2 Eker ayrans"
+      }
+    ]
+  },
+  {
     "id": "falafel-menu-250",
     "active": true,
     "startsAt": null,

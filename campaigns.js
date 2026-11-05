@@ -2,8 +2,9 @@
 (() => {
  const section=document.getElementById('campaigns');
  const list=document.getElementById('campaignsList');
+ const pagination=document.getElementById('campaignsPagination');
  const viewer=document.getElementById('campaignViewer');
- if(!section||!list||!viewer)return;
+ if(!section||!list||!pagination||!viewer)return;
  const poster=viewer.querySelector('img');
  const viewerTitle=document.getElementById('campaignViewerTitle');
  const closeButton=viewer.querySelector('button');
@@ -12,9 +13,9 @@
  sidePhoto.hidden=true;
  poster.after(sidePhoto);
  const copy={
-  tr:{heading:'Kampanyalar',eyebrow:'GÜNCEL KAMPANYA',details:'Afişi görüntüle',close:'Kapat',poster:'kampanya afişi'},
-  ar:{heading:'عروضنا',eyebrow:'عرضنا الحالي',details:'شاهد تفاصيل العرض',close:'إغلاق',poster:'ملصق العرض'},
-  en:{heading:'Special Offers',eyebrow:'CURRENT OFFER',details:'View offer poster',close:'Close',poster:'offer poster'}
+  tr:{heading:'Kampanyalar',eyebrow:'GÜNCEL KAMPANYA',details:'Afişi görüntüle',close:'Kapat',poster:'kampanya afişi',navigation:'Kampanya seç'},
+  ar:{heading:'عروضنا',eyebrow:'عرضنا الحالي',details:'شاهد تفاصيل العرض',close:'إغلاق',poster:'ملصق العرض',navigation:'اختر عرضًا'},
+  en:{heading:'Special Offers',eyebrow:'CURRENT OFFER',details:'View offer poster',close:'Close',poster:'offer poster',navigation:'Choose an offer'}
  };
  const escape=value=>String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
  const language=()=>Object.hasOwn(copy,document.documentElement.lang)?document.documentElement.lang:'tr';
@@ -26,6 +27,28 @@
   if(campaign.active!==true)return false;
   for(const field of ['startsAt','endsAt'])if(campaign[field]&&Number.isNaN(Date.parse(campaign[field])))return false;
   return (!campaign.startsAt||now>=Date.parse(campaign.startsAt))&&(!campaign.endsAt||now<Date.parse(campaign.endsAt));
+ }
+ function campaignPosition(index){
+  const first=list.firstElementChild.getBoundingClientRect();
+  const card=list.children[index].getBoundingClientRect();
+  const distance=Math.abs(card.left-first.left);
+  return Math.min(distance,list.scrollWidth-list.clientWidth);
+ }
+ function updatePagination(){
+  const offset=Math.abs(list.scrollLeft);
+  let current=0;
+  let nearest=Infinity;
+  Array.from(pagination.children).forEach((button,index)=>{
+   const distance=Math.abs(campaignPosition(index)-offset);
+   if(distance<nearest){
+    nearest=distance;
+    current=index;
+   }
+  });
+  Array.from(pagination.children).forEach((button,index)=>{
+   if(index===current)button.setAttribute('aria-current','true');
+   else button.removeAttribute('aria-current');
+  });
  }
  function render(){
   const lang=language(),t=copy[lang],now=Date.now();
@@ -44,7 +67,21 @@
     <div class="campaign-action"><div class="campaign-price" dir="ltr">${escape(c.price)}<small>TL</small></div><button class="campaign-detail-button" type="button" data-campaign="${index}" aria-haspopup="dialog" aria-controls="campaignViewer">${t.details}</button></div>
    </article>`;
   }).join('');
+  pagination.setAttribute('aria-label',t.navigation);
+  pagination.innerHTML=campaigns.length>1?campaigns.map((c,index)=>
+   `<button type="button" data-slide="${index}" aria-label="${escape(translated(c.title,lang))}" aria-controls="campaignTitle${index}">${index+1}</button>`
+  ).join(''):'';
+  updatePagination();
  }
+ pagination.addEventListener('click',event=>{
+  const button=event.target.closest('[data-slide]');
+  if(!button)return;
+  const direction=document.documentElement.dir==='rtl'?-1:1;
+  const behavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth';
+  list.scrollTo({left:direction*campaignPosition(Number(button.dataset.slide)),behavior});
+ });
+ list.addEventListener('scroll',updatePagination,{passive:true});
+ window.addEventListener('resize',updatePagination);
  list.addEventListener('click',event=>{
   const button=event.target.closest('[data-campaign]');if(!button)return;
   const campaign=campaigns[Number(button.dataset.campaign)];if(!campaign)return;
