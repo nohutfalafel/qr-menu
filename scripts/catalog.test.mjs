@@ -121,7 +121,9 @@ test('Karışık Meze Tabağı uses the approved square image and keeps its prod
   assert.equal(binary.subarray(0,4).toString('ascii'),'RIFF');
   assert.equal(binary.subarray(8,12).toString('ascii'),'WEBP');
   assert.equal(binary.readUInt32LE(4)+8,binary.length);
-  assert.equal(createHash('sha1').update(Buffer.from('blob '+binary.length+'\\0')).update(binary).digest('hex'),'6bd0956e9561337b74a0aa3d3a61810e2dd70cde');
+  const gitBlobHeader=Buffer.concat([Buffer.from('blob '+binary.length),Buffer.from([0])]);
+  assert.equal(createHash('sha1').update(gitBlobHeader).update(binary).digest('hex'),
+    '6bd0956e9561337b74a0aa3d3a61810e2dd70cde');
   const renderer=fs.readFileSync(path.join(root,'menu.js'),'utf8');
-  assert.match(renderer,/Karışık Meze Tabağı[^\\n]*karisik-meze-tabagi-20261114\\.webp/);
+  assert.ok(renderer.includes('"Karışık Meze Tabağı": "'+photoPath+'"'));
 });
