@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {buildCatalog,serializeCatalog} from './generate-catalog.mjs';
 
@@ -106,4 +107,23 @@ test('Şambali is hidden, reversible, and retains historic stable ID 32',()=>{
   assert.match(fallback,/\['dessert','Şambali Tatlısı'[^\n]*,false\]/);
   assert.match(renderer,/item\[6\]!==false/);
   assert.match(cmsUpdater,/change\.active/);
+});
+
+
+test('Karışık Meze Tabağı uses the approved square image and keeps its product data',()=>{
+  const photoPath='assets/meze-cutouts/karisik-meze-tabagi-20261114.webp';
+  const dish=catalog.products.find(p=>p.id===21);
+  assert.equal(dish?.name.tr,'Karışık Meze Tabağı');
+  assert.equal(dish?.price,200);
+  assert.equal(dish?.active,true);
+  assert.equal(dish?.image,photoPath);
+  const binary=fs.readFileSync(path.join(root,photoPath));
+  assert.equal(binary.subarray(0,4).toString('ascii'),'RIFF');
+  assert.equal(binary.subarray(8,12).toString('ascii'),'WEBP');
+  assert.equal(binary.readUInt32LE(4)+8,binary.length);
+  const gitBlobHeader=Buffer.concat([Buffer.from('blob '+binary.length),Buffer.from([0])]);
+  assert.equal(createHash('sha1').update(gitBlobHeader).update(binary).digest('hex'),
+    '6bd0956e9561337b74a0aa3d3a61810e2dd70cde');
+  const renderer=fs.readFileSync(path.join(root,'menu.js'),'utf8');
+  assert.ok(renderer.includes('"Karışık Meze Tabağı": "'+photoPath+'"'));
 });
