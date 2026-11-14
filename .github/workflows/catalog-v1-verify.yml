@@ -2,10 +2,8 @@ name: QR catalog v1 consistency
 on:
   push:
     paths:
-      - 'menu-data.js'
-      - 'menu-ar.js'
-      - 'menu.js'
-      - 'cms/**'
+      - 'cms/catalog-v1.json'
+      - 'cms/product-ids.json'
       - 'scripts/**'
       - '.github/workflows/catalog-v1-verify.yml'
   pull_request:
