@@ -1,0 +1,1349 @@
+{
+  "schemaVersion": 1,
+  "source": "nohutfalafel/qr-menu",
+  "currency": "TRY",
+  "categories": [
+    {
+      "id": "all",
+      "name": {
+        "tr": "Tümü",
+        "en": "All",
+        "ar": "الكل"
+      },
+      "description": {
+        "tr": "Lübnan mutfağından taze ve doğal lezzetler",
+        "en": "Fresh Lebanese flavours, made with care",
+        "ar": "أطيب النكهات من مطبخنا اللبناني"
+      }
+    },
+    {
+      "id": "wrap",
+      "name": {
+        "tr": "Dürümler",
+        "en": "Wraps",
+        "ar": "السندويشات"
+      },
+      "description": {
+        "tr": "Taptaze malzemeler, bol lezzet",
+        "en": "Freshly made wraps, packed with flavour",
+        "ar": "سندويشات محضّرة بمكونات طازجة"
+      }
+    },
+    {
+      "id": "plate",
+      "name": {
+        "tr": "Porsiyonlar",
+        "en": "Platters",
+        "ar": "الصحون"
+      },
+      "description": {
+        "tr": "Doyurucu tabaklar, doğal lezzetler",
+        "en": "Hearty platters full of Lebanese flavours",
+        "ar": "صحون متنوعة وغنية بالنكهات"
+      }
+    },
+    {
+      "id": "fatte",
+      "name": {
+        "tr": "Fatte",
+        "en": "Fatteh",
+        "ar": "الفتّة"
+      },
+      "description": {
+        "tr": "Lübnan mutfağının sıcacık klasiği",
+        "en": "Warm and comforting Lebanese-style fatteh",
+        "ar": "فتّة لبنانية دافئة على أصولها"
+      }
+    },
+    {
+      "id": "meze",
+      "name": {
+        "tr": "Mezeler",
+        "en": "Appetizers",
+        "ar": "المقبلات"
+      },
+      "description": {
+        "tr": "Sofranıza renk katan mezeler",
+        "en": "A delicious selection of appetizers",
+        "ar": "مقبلات لبنانية شهية"
+      }
+    },
+    {
+      "id": "side",
+      "name": {
+        "tr": "Diğer",
+        "en": "Sides",
+        "ar": "الأطباق الجانبية"
+      },
+      "description": {
+        "tr": "Lezzeti tamamlayan seçenekler",
+        "en": "Tasty additions to your meal",
+        "ar": "أصناف لذيذة تكمّل سفرتك"
+      }
+    },
+    {
+      "id": "salad",
+      "name": {
+        "tr": "Salatalar",
+        "en": "Salads",
+        "ar": "السلطات"
+      },
+      "description": {
+        "tr": "Taze, hafif ve renkli",
+        "en": "Fresh, light and colourful",
+        "ar": "سلطات طازجة وخفيفة"
+      }
+    },
+    {
+      "id": "dessert",
+      "name": {
+        "tr": "Tatlı",
+        "en": "Desserts",
+        "ar": "الحلويات"
+      },
+      "description": {
+        "tr": "Yemeğinize tatlı bir son",
+        "en": "A sweet finish to your meal",
+        "ar": "حلوياتنا لمسك الختام"
+      }
+    },
+    {
+      "id": "drink",
+      "name": {
+        "tr": "İçecekler",
+        "en": "Drinks",
+        "ar": "المشروبات"
+      },
+      "description": {
+        "tr": "Serinletici ve doğal içecekler",
+        "en": "Cold drinks, mineral water and Turkish tea",
+        "ar": "مشروبات باردة وساخنة لكل الأذواق"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": 51,
+      "category": "wrap",
+      "name": {
+        "tr": "Vegan Dürüm",
+        "en": "Vegan Wrap",
+        "ar": "سندويش فلافل نباتي"
+      },
+      "displayName": {
+        "tr": "Vegan Dürüm",
+        "en": "Vegan Wrap",
+        "ar": "سندويش فلافل نباتي"
+      },
+      "description": {
+        "tr": "Falafel, humus, marul, domates, salatalık, nane",
+        "en": "Falafel, hummus, lettuce, tomato, fresh cucumber, mint",
+        "ar": "فلافل، حمص، خس، بندورة، خيار طازج ونعناع"
+      },
+      "price": 140,
+      "image": "assets/wrap-cutouts/vegan-transparent.webp"
+    },
+    {
+      "id": 0,
+      "category": "wrap",
+      "name": {
+        "tr": "Falafel Dürüm",
+        "en": "Falafel Wrap",
+        "ar": "سندويش فلافل"
+      },
+      "displayName": {
+        "tr": "Falafel Dürüm",
+        "en": "Falafel Wrap",
+        "ar": "سندويش فلافل"
+      },
+      "description": {
+        "tr": "Falafel, humus, marul, domates, salatalık, nane, tarator sosu",
+        "en": "Falafel, hummus, lettuce, tomato, fresh cucumber, mint and tarator sauce",
+        "ar": "فلافل، حمص بالطحينة، خس، بندورة، خيار طازج، نعناع وصلصة الطرطور"
+      },
+      "price": 140,
+      "image": "assets/wrap-cutouts/wraps-transparent.webp"
+    },
+    {
+      "id": 1,
+      "category": "wrap",
+      "name": {
+        "tr": "Patates Dürüm",
+        "en": "Fries Wrap",
+        "ar": "سندويش بطاطا مقلية"
+      },
+      "displayName": {
+        "tr": "Patates Dürüm",
+        "en": "Fries Wrap",
+        "ar": "سندويش بطاطا مقلية"
+      },
+      "description": {
+        "tr": "Kızartılmış patates, humus, marul, domates, salatalık, nane, tarator sosu",
+        "en": "Crispy fries, hummus, lettuce, tomato, fresh cucumber, mint and tarator sauce",
+        "ar": "بطاطا مقلية، حمص بالطحينة، خس، بندورة، خيار طازج، نعناع وصلصة الطرطور"
+      },
+      "price": 135,
+      "image": "assets/wrap-cutouts/wraps-transparent.webp"
+    },
+    {
+      "id": 2,
+      "category": "wrap",
+      "name": {
+        "tr": "Nohut Özel Dürüm",
+        "en": "Nohut Special Wrap",
+        "ar": "سندويش نوهوت المميّز"
+      },
+      "displayName": {
+        "tr": "Nohut Özel Dürüm",
+        "en": "Nohut Special Wrap",
+        "ar": "سندويش نوهوت المميّز"
+      },
+      "description": {
+        "tr": "Kızartılmış patlıcan, falafel, humus, mütebbel, marul, domates, salatalık, nane, tarator sosu",
+        "en": "Falafel, fried eggplant, hummus, mutabbal, lettuce, tomato, fresh cucumber, mint and tarator sauce",
+        "ar": "فلافل، باذنجان مقلي، حمص بالطحينة، متبّل باذنجان، خس، بندورة، خيار طازج، نعناع وصلصة الطرطور"
+      },
+      "price": 185,
+      "image": "assets/wrap-cutouts/wraps-transparent.webp"
+    },
+    {
+      "id": 3,
+      "category": "wrap",
+      "name": {
+        "tr": "Patatesli Patlıcanlı Falafel Dürüm",
+        "en": "Falafel Wrap with Fries & Eggplant",
+        "ar": "سندويش فلافل بالبطاطا والباذنجان"
+      },
+      "displayName": {
+        "tr": "Patatesli Patlıcanlı Falafel Dürüm",
+        "en": "Falafel Wrap with Fries & Eggplant",
+        "ar": "سندويش فلافل بالبطاطا والباذنجان"
+      },
+      "description": {
+        "tr": "Kızartılmış patates ve patlıcan, falafel, humus, mütebbel, marul, domates, salatalık, nane, tarator sosu",
+        "en": "Falafel, fries, fried eggplant, hummus, mutabbal, lettuce, tomato, fresh cucumber, mint and tarator sauce",
+        "ar": "فلافل، بطاطا مقلية، باذنجان مقلي، حمص بالطحينة، متبّل باذنجان، خس، بندورة، خيار طازج، نعناع وصلصة الطرطور"
+      },
+      "price": 195,
+      "image": "assets/wrap-cutouts/wraps-transparent.webp"
+    },
+    {
+      "id": 4,
+      "category": "wrap",
+      "name": {
+        "tr": "Patatesli Falafel Dürüm",
+        "en": "Falafel & Fries Wrap",
+        "ar": "سندويش فلافل مع البطاطا"
+      },
+      "displayName": {
+        "tr": "Patatesli Falafel Dürüm",
+        "en": "Falafel & Fries Wrap",
+        "ar": "سندويش فلافل مع البطاطا"
+      },
+      "description": {
+        "tr": "Kızarmış patates, falafel, humus, marul, domates, salatalık, nane, tarator sosu",
+        "en": "Falafel, fries, hummus, lettuce, tomato, fresh cucumber, mint and tarator sauce",
+        "ar": "فلافل، بطاطا مقلية، حمص بالطحينة، خس، بندورة، خيار طازج، نعناع وصلصة الطرطور"
+      },
+      "price": 185,
+      "image": "assets/wrap-cutouts/wraps-transparent.webp"
+    },
+    {
+      "id": 5,
+      "category": "plate",
+      "name": {
+        "tr": "Falafel Porsiyon",
+        "en": "Falafel Platter",
+        "ar": "صحن فلافل"
+      },
+      "displayName": {
+        "tr": "Falafel Porsiyon",
+        "en": "Falafel Platter",
+        "ar": "صحن فلافل"
+      },
+      "description": {
+        "tr": "6 adet falafel, humus, babagannuş, mütebbel",
+        "en": "Six falafel pieces served with hummus, baba ghanoush and mutabbal",
+        "ar": "6 حبات فلافل مع حمص بالطحينة، بابا غنوج ومتبل باذنجان"
+      },
+      "price": 200,
+      "image": "assets/platter-cutouts/falafel-porsiyon.webp"
+    },
+    {
+      "id": 6,
+      "category": "plate",
+      "name": {
+        "tr": "Vegan Özel Tabağı",
+        "en": "Vegan Special Platter",
+        "ar": "الصحن النباتي المميّز"
+      },
+      "displayName": {
+        "tr": "Vegan Özel Tabağı",
+        "en": "Vegan Special Platter",
+        "ar": "الصحن النباتي المميّز"
+      },
+      "description": {
+        "tr": "4 falafel, 2 ıspanaklı sembusek, 3 sarma, babagannuş, humus",
+        "en": "Four falafel pieces, two spinach sambousek, three stuffed vine leaves, baba ghanoush and hummus",
+        "ar": "4 حبات فلافل، 2 سمبوسك بالسبانخ، 3 قطع ورق عنب، بابا غنوج وحمص بالطحينة"
+      },
+      "price": 320,
+      "image": "assets/platter-cutouts/vegan-2-sembusek-20261029.webp"
+    },
+    {
+      "id": 7,
+      "category": "plate",
+      "name": {
+        "tr": "Nohut Özel Tabağı",
+        "en": "Nohut Special Platter",
+        "ar": "صحن نوهوت المميّز"
+      },
+      "displayName": {
+        "tr": "Nohut Özel Tabağı",
+        "en": "Nohut Special Platter",
+        "ar": "صحن نوهوت المميّز"
+      },
+      "description": {
+        "tr": "4 falafel, 1 kibbe, 2 ıspanaklı sembusek, humus",
+        "en": "Four falafel pieces, one kibbeh, two spinach sambousek and hummus",
+        "ar": "4 حبات فلافل، حبة كبة، 2 سمبوسك بالسبانخ وحمص بالطحينة"
+      },
+      "price": 350,
+      "image": "assets/platter-cutouts/nohut-1-kibbe-2-sembusek-20261029.webp"
+    },
+    {
+      "id": 8,
+      "category": "plate",
+      "name": {
+        "tr": "Beyrut Tabağı",
+        "en": "Beirut Platter",
+        "ar": "صحن بيروت"
+      },
+      "displayName": {
+        "tr": "Beyrut Tabağı",
+        "en": "Beirut Platter",
+        "ar": "صحن بيروت"
+      },
+      "description": {
+        "tr": "4 falafel, 2 kıymalı sembusek, humus",
+        "en": "Four falafel pieces, two meat sambousek and hummus",
+        "ar": "4 حبات فلافل، حبتا سمبوسك باللحمة وحمص بالطحينة"
+      },
+      "price": 300,
+      "image": "assets/platter-cutouts/beyrut-2-kiymali-sembusek.webp"
+    },
+    {
+      "id": 9,
+      "category": "plate",
+      "name": {
+        "tr": "Bakla Tabağı",
+        "en": "Fava Beans with Olive Oil",
+        "ar": "صحن فول بزيت الزيتون"
+      },
+      "displayName": {
+        "tr": "Bakla Tabağı",
+        "en": "Fava Beans with Olive Oil",
+        "ar": "صحن فول بزيت الزيتون"
+      },
+      "description": {
+        "tr": "Bakla, sarımsak, zeytinyağı, maydanoz, domates",
+        "en": "Fava beans with garlic, olive oil, parsley and tomato",
+        "ar": "فول مع الثوم وزيت الزيتون والبقدونس والبندورة"
+      },
+      "price": 160,
+      "image": "assets/platter-cutouts/bakla-no-yogurt-20261029.webp"
+    },
+    {
+      "id": 10,
+      "category": "plate",
+      "name": {
+        "tr": "Yoğurtlu Bakla Tabağı",
+        "en": "Fava Beans with Yogurt",
+        "ar": "فول باللبن"
+      },
+      "displayName": {
+        "tr": "Yoğurtlu Bakla Tabağı",
+        "en": "Fava Beans with Yogurt",
+        "ar": "فول باللبن"
+      },
+      "description": {
+        "tr": "Bakla ve yoğurt",
+        "en": "Fava beans served with yogurt",
+        "ar": "فول مع اللبن"
+      },
+      "price": 180,
+      "image": "assets/platter-cutouts/bakla.webp"
+    },
+    {
+      "id": 11,
+      "category": "fatte",
+      "name": {
+        "tr": "Tereyağlı Fatte",
+        "en": "Chickpea Fatteh with Butter",
+        "ar": "فتة حمص بالزبدة"
+      },
+      "displayName": {
+        "tr": "Tereyağlı Fatte",
+        "en": "Chickpea Fatteh with Butter",
+        "ar": "فتة حمص بالزبدة"
+      },
+      "description": {
+        "tr": "Tahinli sarımsaklı yoğurt, haşlanmış nohut ve kızarmış Lübnan ekmeği",
+        "en": "Chickpeas and crispy Lebanese bread with garlic-tahini yogurt and butter",
+        "ar": "حمص مسلوق، لبن بالطحينة والثوم، وخبز لبناني مقرمش"
+      },
+      "price": 250,
+      "image": "assets/platter-cutouts/fatte-pair-20261028.webp"
+    },
+    {
+      "id": 12,
+      "category": "fatte",
+      "name": {
+        "tr": "Patlıcanlı Fatte",
+        "en": "Eggplant Fatteh",
+        "ar": "فتة باذنجان"
+      },
+      "displayName": {
+        "tr": "Patlıcanlı Fatte",
+        "en": "Eggplant Fatteh",
+        "ar": "فتة باذنجان"
+      },
+      "description": {
+        "tr": "Patlıcanlı fatte",
+        "en": "Lebanese-style fatteh with eggplant",
+        "ar": "فتة لبنانية بالباذنجان"
+      },
+      "price": 260,
+      "image": "assets/platter-cutouts/fatte-selected-three-20261028.webp"
+    },
+    {
+      "id": 13,
+      "category": "fatte",
+      "name": {
+        "tr": "Tereyağında Kuruyemişli Fatte",
+        "en": "Fatteh with Butter & Nuts",
+        "ar": "فتة بالزبدة والمكسرات"
+      },
+      "displayName": {
+        "tr": "Tereyağında Kuruyemişli Fatte",
+        "en": "Fatteh with Butter & Nuts",
+        "ar": "فتة بالزبدة والمكسرات"
+      },
+      "description": {
+        "tr": "Tereyağı ve kuruyemişler",
+        "en": "Lebanese-style fatteh with butter and mixed nuts",
+        "ar": "فتة مغطّاة بالزبدة والمكسرات"
+      },
+      "price": 280,
+      "image": "assets/platter-cutouts/fatte-pair-20261028.webp"
+    },
+    {
+      "id": 14,
+      "category": "fatte",
+      "name": {
+        "tr": "Kavurmalı Fatte",
+        "en": "Fatteh with Roasted Meat",
+        "ar": "فتة باللحمة"
+      },
+      "displayName": {
+        "tr": "Kavurmalı Fatte",
+        "en": "Fatteh with Roasted Meat",
+        "ar": "فتة باللحمة"
+      },
+      "description": {
+        "tr": "Kavurmalı fatte",
+        "en": "Lebanese-style fatteh with roasted meat",
+        "ar": "فتة مع لحم محمّر"
+      },
+      "price": 330,
+      "image": "assets/platter-cutouts/kavurmali-fatte-20261027.webp"
+    },
+    {
+      "id": 15,
+      "category": "meze",
+      "name": {
+        "tr": "Sade Humus",
+        "en": "Classic Hummus",
+        "ar": "حمص بالطحينة"
+      },
+      "displayName": {
+        "tr": "Sade Humus",
+        "en": "Classic Hummus",
+        "ar": "حمص بالطحينة"
+      },
+      "description": {
+        "tr": "Nohut ve tahin",
+        "en": "Creamy chickpea and tahini dip",
+        "ar": "حمص مهروس مع الطحينة"
+      },
+      "price": 160,
+      "image": "assets/meze-cutouts/sade-humus-top.webp"
+    },
+    {
+      "id": 16,
+      "category": "meze",
+      "name": {
+        "tr": "Kuruyemişli Humus",
+        "en": "Hummus with Mixed Nuts",
+        "ar": "حمص بالمكسرات"
+      },
+      "displayName": {
+        "tr": "Kuruyemişli Humus",
+        "en": "Hummus with Mixed Nuts",
+        "ar": "حمص بالمكسرات"
+      },
+      "description": {
+        "tr": "Kaju, Antep fıstığı, badem",
+        "en": "Hummus with cashews, pistachios and almonds",
+        "ar": "حمص مع الكاجو والفستق الحلبي واللوز"
+      },
+      "price": 250,
+      "image": "assets/meze-cutouts/kuruyemisli-humus.webp"
+    },
+    {
+      "id": 17,
+      "category": "meze",
+      "name": {
+        "tr": "Pancarlı Humus",
+        "en": "Beetroot Hummus",
+        "ar": "حمص بالشمندر"
+      },
+      "displayName": {
+        "tr": "Pancarlı Humus",
+        "en": "Beetroot Hummus",
+        "ar": "حمص بالشمندر"
+      },
+      "description": {
+        "tr": "Pancarlı humus",
+        "en": "Hummus blended with beetroot",
+        "ar": "حمص بالطحينة والشمندر"
+      },
+      "price": 180,
+      "image": "assets/meze-cutouts/pancarli-humus.webp"
+    },
+    {
+      "id": 18,
+      "category": "meze",
+      "name": {
+        "tr": "Mütebbel",
+        "en": "Mutabbal (Eggplant Dip)",
+        "ar": "متبّل باذنجان"
+      },
+      "displayName": {
+        "tr": "Mütebbel",
+        "en": "Mutabbal (Eggplant Dip)",
+        "ar": "متبّل باذنجان"
+      },
+      "description": {
+        "tr": "Patlıcanlı meze",
+        "en": "Lebanese-style eggplant dip",
+        "ar": "متبّل من الباذنجان"
+      },
+      "price": 160,
+      "image": "assets/meze-cutouts/mutebbel.webp"
+    },
+    {
+      "id": 19,
+      "category": "meze",
+      "name": {
+        "tr": "Babagannuş",
+        "en": "Baba Ghanoush",
+        "ar": "بابا غنوج"
+      },
+      "displayName": {
+        "tr": "Babagannuş",
+        "en": "Baba Ghanoush",
+        "ar": "بابا غنوج"
+      },
+      "description": {
+        "tr": "Patlıcanlı meze",
+        "en": "Traditional eggplant appetizer",
+        "ar": "مقبلات من الباذنجان على الطريقة اللبنانية"
+      },
+      "price": 170,
+      "image": "assets/meze-cutouts/babagannus-updated.webp"
+    },
+    {
+      "id": 20,
+      "category": "meze",
+      "name": {
+        "tr": "Muhammara",
+        "en": "Muhammara (Pepper Dip)",
+        "ar": "محمّرة"
+      },
+      "displayName": {
+        "tr": "Muhammara",
+        "en": "Muhammara (Pepper Dip)",
+        "ar": "محمّرة"
+      },
+      "description": {
+        "tr": "Biberli meze",
+        "en": "A flavourful pepper-based dip",
+        "ar": "مقبلات بالفلفل"
+      },
+      "price": 160,
+      "image": "assets/meze-cutouts/muhammara.webp"
+    },
+    {
+      "id": 21,
+      "category": "meze",
+      "name": {
+        "tr": "Karışık Meze Tabağı",
+        "en": "Assorted Appetizer Platter",
+        "ar": "طبق مقبلات مشكّلة"
+      },
+      "displayName": {
+        "tr": "Karışık Meze Tabağı",
+        "en": "Assorted Appetizer Platter",
+        "ar": "طبق مقبلات مشكّلة"
+      },
+      "description": {
+        "tr": "Karışık meze",
+        "en": "A selection of our appetizers",
+        "ar": "تشكيلة من المقبلات اللبنانية"
+      },
+      "price": 200,
+      "image": null
+    },
+    {
+      "id": 22,
+      "category": "side",
+      "name": {
+        "tr": "Kibbe (3 Adet)",
+        "en": "Kibbeh (3 Pieces)",
+        "ar": "كبة (3 حبات)"
+      },
+      "displayName": {
+        "tr": "Kibbe (3 Adet)",
+        "en": "Kibbeh (3 Pieces)",
+        "ar": "كبة (3 حبات)"
+      },
+      "description": {
+        "tr": "Lübnan usulü içli köfte",
+        "en": "Three Lebanese-style stuffed bulgur croquettes",
+        "ar": "كبة لبنانية محشية"
+      },
+      "price": 330,
+      "image": "assets/products/kibbe-6003492c.jpg"
+    },
+    {
+      "id": 23,
+      "category": "side",
+      "name": {
+        "tr": "Kıymalı Sembusek (4 Adet)",
+        "en": "Meat Sambousek (4 Pieces)",
+        "ar": "سمبوسك باللحمة (4 حبات)"
+      },
+      "displayName": {
+        "tr": "Kıymalı Sembusek (4 Adet)",
+        "en": "Meat Sambousek (4 Pieces)",
+        "ar": "سمبوسك باللحمة (4 حبات)"
+      },
+      "description": {
+        "tr": "Kıymalı hamur işi",
+        "en": "Four savoury pastries filled with minced meat",
+        "ar": "فطائر صغيرة محشية باللحمة المفرومة"
+      },
+      "price": 250,
+      "image": "assets/side-cutouts/sides.webp"
+    },
+    {
+      "id": 24,
+      "category": "side",
+      "name": {
+        "tr": "Ispanaklı Sembusek (4 Adet)",
+        "en": "Spinach Sambousek (4 Pieces)",
+        "ar": "سمبوسك بالسبانخ (4 حبات)"
+      },
+      "displayName": {
+        "tr": "Ispanaklı Sembusek (4 Adet)",
+        "en": "Spinach Sambousek (4 Pieces)",
+        "ar": "سمبوسك بالسبانخ (4 حبات)"
+      },
+      "description": {
+        "tr": "Ispanaklı hamur işi",
+        "en": "Four pastries filled with spinach",
+        "ar": "فطائر صغيرة محشية بالسبانخ"
+      },
+      "price": 180,
+      "image": "assets/side-cutouts/sides.webp"
+    },
+    {
+      "id": 25,
+      "category": "side",
+      "name": {
+        "tr": "Peynirli Sembusek (4 Adet)",
+        "en": "Cheese Sambousek (4 Pieces)",
+        "ar": "سمبوسك بالجبنة (4 حبات)"
+      },
+      "displayName": {
+        "tr": "Peynirli Sembusek (4 Adet)",
+        "en": "Cheese Sambousek (4 Pieces)",
+        "ar": "سمبوسك بالجبنة (4 حبات)"
+      },
+      "description": {
+        "tr": "Peynirli hamur işi",
+        "en": "Four pastries filled with cheese",
+        "ar": "فطائر صغيرة محشية بالجبنة"
+      },
+      "price": 190,
+      "image": "assets/side-cutouts/cheese-sembusek.webp"
+    },
+    {
+      "id": 26,
+      "category": "side",
+      "name": {
+        "tr": "Sarma (6 Adet)",
+        "en": "Stuffed Vine Leaves (6 Pieces)",
+        "ar": "ورق عنب (6 قطع)"
+      },
+      "displayName": {
+        "tr": "Sarma (6 Adet)",
+        "en": "Stuffed Vine Leaves (6 Pieces)",
+        "ar": "ورق عنب (6 قطع)"
+      },
+      "description": {
+        "tr": "Sarma",
+        "en": "Six stuffed vine leaves",
+        "ar": "ورق عنب محشي"
+      },
+      "price": 180,
+      "image": "assets/products/tgo-9295403_1738157981309.jpg"
+    },
+    {
+      "id": 27,
+      "category": "side",
+      "name": {
+        "tr": "Patates Kızartması",
+        "en": "French Fries",
+        "ar": "بطاطا مقلية"
+      },
+      "displayName": {
+        "tr": "Patates Kızartması",
+        "en": "French Fries",
+        "ar": "بطاطا مقلية"
+      },
+      "description": {
+        "tr": "Kızarmış patates",
+        "en": "Freshly fried potatoes",
+        "ar": "بطاطا مقلية"
+      },
+      "price": 150,
+      "image": "assets/side-cutouts/sides.webp"
+    },
+    {
+      "id": 28,
+      "category": "side",
+      "name": {
+        "tr": "Patlıcan Kızartması",
+        "en": "Fried Eggplant",
+        "ar": "باذنجان مقلي"
+      },
+      "displayName": {
+        "tr": "Patlıcan Kızartması",
+        "en": "Fried Eggplant",
+        "ar": "باذنجان مقلي"
+      },
+      "description": {
+        "tr": "Kızarmış patlıcan",
+        "en": "Fried eggplant slices",
+        "ar": "شرائح باذنجان مقلية"
+      },
+      "price": 150,
+      "image": null
+    },
+    {
+      "id": 29,
+      "category": "salad",
+      "name": {
+        "tr": "Falafel Salatası",
+        "en": "Falafel Salad",
+        "ar": "سلطة فلافل"
+      },
+      "displayName": {
+        "tr": "Falafel Salatası",
+        "en": "Falafel Salad",
+        "ar": "سلطة فلافل"
+      },
+      "description": {
+        "tr": "Falafelli salata",
+        "en": "Fresh salad with falafel",
+        "ar": "سلطة طازجة مع الفلافل"
+      },
+      "price": 200,
+      "image": "assets/salad-cutouts/salads.webp"
+    },
+    {
+      "id": 30,
+      "category": "salad",
+      "name": {
+        "tr": "Tabbule",
+        "en": "Tabbouleh",
+        "ar": "تبّولة"
+      },
+      "displayName": {
+        "tr": "Tabbule",
+        "en": "Tabbouleh",
+        "ar": "تبّولة"
+      },
+      "description": {
+        "tr": "Maydanozlu salata",
+        "en": "Traditional parsley and bulgur salad",
+        "ar": "سلطة لبنانية بالبقدونس والبرغل"
+      },
+      "price": 165,
+      "image": "assets/salad-cutouts/salads.webp"
+    },
+    {
+      "id": 31,
+      "category": "salad",
+      "name": {
+        "tr": "Fettuş",
+        "en": "Fattoush",
+        "ar": "فتّوش"
+      },
+      "displayName": {
+        "tr": "Fettuş",
+        "en": "Fattoush",
+        "ar": "فتّوش"
+      },
+      "description": {
+        "tr": "Lübnan usulü salata",
+        "en": "Fresh Lebanese-style salad with crispy bread",
+        "ar": "سلطة لبنانية مع قطع الخبز المقرمشة"
+      },
+      "price": 185,
+      "image": "assets/salad-cutouts/salads.webp"
+    },
+    {
+      "id": 52,
+      "category": "dessert",
+      "name": {
+        "tr": "Layali Lübnan",
+        "en": "Lebanese Nights (Layali Lubnan)",
+        "ar": "ليالي لبنان"
+      },
+      "displayName": {
+        "tr": "Layali Lübnan",
+        "en": "Lebanese Nights (Layali Lubnan)",
+        "ar": "ليالي لبنان"
+      },
+      "description": {
+        "tr": "Geleneksel Lübnan tatlısı",
+        "en": "Traditional Lebanese dessert",
+        "ar": "حلوى لبنانية تقليدية"
+      },
+      "price": 150,
+      "image": "assets/dessert-cutouts/lubnan-geceleri-poster-bowl.webp"
+    },
+    {
+      "id": 32,
+      "category": "dessert",
+      "name": {
+        "tr": "Şambali Tatlısı",
+        "en": "Şambali (Semolina Dessert)",
+        "ar": "شامبالي"
+      },
+      "displayName": {
+        "tr": "Şambali Tatlısı",
+        "en": "Şambali (Semolina Dessert)",
+        "ar": "شامبالي"
+      },
+      "description": {
+        "tr": "Geleneksel tatlı",
+        "en": "Traditional Turkish semolina dessert",
+        "ar": "حلوى سميد تركية تقليدية"
+      },
+      "price": 70,
+      "image": "assets/dessert-cutouts/sambali-one-almond.webp"
+    },
+    {
+      "id": 33,
+      "category": "dessert",
+      "name": {
+        "tr": "Tahinli Muhallebi",
+        "en": "Tahini Milk Pudding",
+        "ar": "مهلبية بالطحينة"
+      },
+      "displayName": {
+        "tr": "Tahinli Muhallebi",
+        "en": "Tahini Milk Pudding",
+        "ar": "مهلبية بالطحينة"
+      },
+      "description": {
+        "tr": "Tahinli muhallebi",
+        "en": "Smooth milk pudding flavoured with tahini",
+        "ar": "مهلبية ناعمة بنكهة الطحينة"
+      },
+      "price": 90,
+      "image": "assets/dessert-cutouts/tahinli-muhallebi.webp"
+    },
+    {
+      "id": 34,
+      "category": "drink",
+      "name": {
+        "tr": "Büyük Ayran",
+        "en": "Eker Ayran (Large)",
+        "ar": "عيران إكر (كبير)"
+      },
+      "displayName": {
+        "tr": "Eker Ayran (Büyük)",
+        "en": "Eker Ayran (Large)",
+        "ar": "عيران إكر (كبير)"
+      },
+      "description": {
+        "tr": "Eker ayran",
+        "en": "Traditional Turkish yogurt drink",
+        "ar": "عيران إكر باللبن"
+      },
+      "price": 40,
+      "image": "assets/drinks/eker-large.png"
+    },
+    {
+      "id": 35,
+      "category": "drink",
+      "name": {
+        "tr": "Küçük Ayran",
+        "en": "Eker Ayran (Small)",
+        "ar": "عيران إكر (صغير)"
+      },
+      "displayName": {
+        "tr": "Eker Ayran (Küçük)",
+        "en": "Eker Ayran (Small)",
+        "ar": "عيران إكر (صغير)"
+      },
+      "description": {
+        "tr": "Eker ayran",
+        "en": "Traditional Turkish yogurt drink",
+        "ar": "عيران إكر باللبن"
+      },
+      "price": 25,
+      "image": "assets/drinks/eker-small.webp"
+    },
+    {
+      "id": 36,
+      "category": "drink",
+      "name": {
+        "tr": "Niğde Gazozu",
+        "en": "Niğde Gazoz",
+        "ar": "غازوز نيغدة"
+      },
+      "displayName": {
+        "tr": "Niğde Gazozu",
+        "en": "Niğde Gazoz",
+        "ar": "غازوز نيغدة"
+      },
+      "description": {
+        "tr": "Niğde gazoz",
+        "en": "Turkish sparkling soft drink",
+        "ar": "مشروب نيغدة الغازي"
+      },
+      "price": 45,
+      "image": "assets/drinks/nigde.jpg"
+    },
+    {
+      "id": 37,
+      "category": "drink",
+      "name": {
+        "tr": "Çamlıca Gazoz",
+        "en": "Çamlıca Gazoz",
+        "ar": "غازوز تشامليجا"
+      },
+      "displayName": {
+        "tr": "Çamlıca Gazoz",
+        "en": "Çamlıca Gazoz",
+        "ar": "غازوز تشامليجا"
+      },
+      "description": {
+        "tr": "Çamlıca gazoz",
+        "en": "Turkish sparkling soft drink",
+        "ar": "مشروب تشامليجا الغازي"
+      },
+      "price": 45,
+      "image": "assets/drinks/camlica.jpg"
+    },
+    {
+      "id": 38,
+      "category": "drink",
+      "name": {
+        "tr": "Beypazarı Maden Suyu",
+        "en": "Beypazarı Sparkling Mineral Water",
+        "ar": "مياه بيبازاري المعدنية الغازية"
+      },
+      "displayName": {
+        "tr": "Beypazarı Maden Suyu",
+        "en": "Beypazarı Sparkling Mineral Water",
+        "ar": "مياه بيبازاري المعدنية الغازية"
+      },
+      "description": {
+        "tr": "Sade",
+        "en": "Plain sparkling mineral water",
+        "ar": "سادة"
+      },
+      "price": 35,
+      "image": "assets/drinks/beypazari-plain.png"
+    },
+    {
+      "id": 39,
+      "category": "drink",
+      "name": {
+        "tr": "Beypazarı Mandalina Aromalı Maden Suyu",
+        "en": "Beypazarı Mandarin Sparkling Water",
+        "ar": "مياه بيبازاري المعدنية باليوسفي"
+      },
+      "displayName": {
+        "tr": "Beypazarı Mandalina Aromalı Maden Suyu",
+        "en": "Beypazarı Mandarin Sparkling Water",
+        "ar": "مياه بيبازاري المعدنية باليوسفي"
+      },
+      "description": {
+        "tr": "Mandalina aromalı",
+        "en": "Sparkling mineral water with mandarin flavour",
+        "ar": "غازية بنكهة اليوسفي"
+      },
+      "price": 35,
+      "image": "assets/drinks/beypazari-mandarin.png"
+    },
+    {
+      "id": 40,
+      "category": "drink",
+      "name": {
+        "tr": "Şişe Cola Turka",
+        "en": "Cola Turka (Glass Bottle)",
+        "ar": "كولا توركا (زجاجة)"
+      },
+      "displayName": {
+        "tr": "Şişe Cola Turka",
+        "en": "Cola Turka (Glass Bottle)",
+        "ar": "كولا توركا (زجاجة)"
+      },
+      "description": {
+        "tr": "Cam şişe",
+        "en": "Cola Turka in a glass bottle",
+        "ar": "زجاجة كولا توركا"
+      },
+      "price": 35,
+      "image": "assets/drinks/cola-bottle.jpg"
+    },
+    {
+      "id": 41,
+      "category": "drink",
+      "name": {
+        "tr": "Kutu Cola Turka",
+        "en": "Cola Turka (Can)",
+        "ar": "كولا توركا (علبة)"
+      },
+      "displayName": {
+        "tr": "Kutu Cola Turka",
+        "en": "Cola Turka (Can)",
+        "ar": "كولا توركا (علبة)"
+      },
+      "description": {
+        "tr": "Kutu",
+        "en": "Cola Turka in a can",
+        "ar": "علبة كولا توركا"
+      },
+      "price": 45,
+      "image": "assets/drinks/cola-can.jpg"
+    },
+    {
+      "id": 42,
+      "category": "drink",
+      "name": {
+        "tr": "Doğanay Acılı Şalgam",
+        "en": "Doğanay Şalgam (Spicy)",
+        "ar": "شلغم دوغاناي (حار)"
+      },
+      "displayName": {
+        "tr": "Doğanay Şalgam (Acı)",
+        "en": "Doğanay Şalgam (Spicy)",
+        "ar": "شلغم دوغاناي (حار)"
+      },
+      "description": {
+        "tr": "Acılı şalgam suyu",
+        "en": "Spicy Turkish fermented turnip drink",
+        "ar": "مشروب الشلغم التركي المخمّر، حار"
+      },
+      "price": 35,
+      "image": "assets/drinks/doganay-spicy.webp"
+    },
+    {
+      "id": 43,
+      "category": "drink",
+      "name": {
+        "tr": "Doğanay Acısız Şalgam",
+        "en": "Doğanay Şalgam (Mild)",
+        "ar": "شلغم دوغاناي (غير حار)"
+      },
+      "displayName": {
+        "tr": "Doğanay Şalgam (Acısız)",
+        "en": "Doğanay Şalgam (Mild)",
+        "ar": "شلغم دوغاناي (غير حار)"
+      },
+      "description": {
+        "tr": "Acısız şalgam suyu",
+        "en": "Turkish fermented turnip drink, not spicy",
+        "ar": "مشروب الشلغم التركي المخمّر، غير حار"
+      },
+      "price": 35,
+      "image": "assets/drinks/doganay-mild.webp"
+    },
+    {
+      "id": 44,
+      "category": "drink",
+      "name": {
+        "tr": "Didi Limon Aromalı Soğuk Çay",
+        "en": "Didi Lemon Iced Tea",
+        "ar": "شاي ديدي المثلّج بالليمون"
+      },
+      "displayName": {
+        "tr": "Didi Limon Aromalı Soğuk Çay",
+        "en": "Didi Lemon Iced Tea",
+        "ar": "شاي ديدي المثلّج بالليمون"
+      },
+      "description": {
+        "tr": "Limon aromalı",
+        "en": "Lemon-flavoured iced tea",
+        "ar": "بنكهة الليمون"
+      },
+      "price": 45,
+      "image": "assets/drinks/didi-lemon.jpg"
+    },
+    {
+      "id": 45,
+      "category": "drink",
+      "name": {
+        "tr": "Didi Çilek Aromalı Soğuk Çay",
+        "en": "Didi Strawberry Iced Tea",
+        "ar": "شاي ديدي المثلّج بالفراولة"
+      },
+      "displayName": {
+        "tr": "Didi Çilek Aromalı Soğuk Çay",
+        "en": "Didi Strawberry Iced Tea",
+        "ar": "شاي ديدي المثلّج بالفراولة"
+      },
+      "description": {
+        "tr": "Çilek aromalı",
+        "en": "Strawberry-flavoured iced tea",
+        "ar": "بنكهة الفراولة"
+      },
+      "price": 45,
+      "image": "assets/drinks/didi-strawberry.jpg"
+    },
+    {
+      "id": 46,
+      "category": "drink",
+      "name": {
+        "tr": "Didi Şeftali Aromalı Soğuk Çay",
+        "en": "Didi Peach Iced Tea",
+        "ar": "شاي ديدي المثلّج بالخوخ"
+      },
+      "displayName": {
+        "tr": "Didi Şeftali Aromalı Soğuk Çay",
+        "en": "Didi Peach Iced Tea",
+        "ar": "شاي ديدي المثلّج بالخوخ"
+      },
+      "description": {
+        "tr": "Şeftali aromalı",
+        "en": "Peach-flavoured iced tea",
+        "ar": "بنكهة الخوخ"
+      },
+      "price": 45,
+      "image": "assets/drinks/didi-peach.jpg"
+    },
+    {
+      "id": 47,
+      "category": "drink",
+      "name": {
+        "tr": "Sarıyer Portakal Aromalı Gazoz",
+        "en": "Sarıyer Orange Soda",
+        "ar": "غازوز ساريير بالبرتقال"
+      },
+      "displayName": {
+        "tr": "Sarıyer Portakal Aromalı Gazoz",
+        "en": "Sarıyer Orange Soda",
+        "ar": "غازوز ساريير بالبرتقال"
+      },
+      "description": {
+        "tr": "Portakal aromalı",
+        "en": "Orange-flavoured sparkling soft drink",
+        "ar": "مشروب غازي بنكهة البرتقال"
+      },
+      "price": 45,
+      "image": "assets/drinks/sariyer-orange.jpg"
+    },
+    {
+      "id": 48,
+      "category": "drink",
+      "name": {
+        "tr": "Sarıyer Mandalina Aromalı Gazoz",
+        "en": "Sarıyer Mandarin Soda",
+        "ar": "غازوز ساريير باليوسفي"
+      },
+      "displayName": {
+        "tr": "Sarıyer Mandalina Aromalı Gazoz",
+        "en": "Sarıyer Mandarin Soda",
+        "ar": "غازوز ساريير باليوسفي"
+      },
+      "description": {
+        "tr": "Mandalina aromalı",
+        "en": "Mandarin-flavoured sparkling soft drink",
+        "ar": "مشروب غازي بنكهة اليوسفي"
+      },
+      "price": 45,
+      "image": "assets/drinks/sariyer-mandarin.jpg"
+    },
+    {
+      "id": 49,
+      "category": "drink",
+      "name": {
+        "tr": "Su",
+        "en": "Water",
+        "ar": "مياه"
+      },
+      "displayName": {
+        "tr": "Su",
+        "en": "Water",
+        "ar": "مياه"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "ar": ""
+      },
+      "price": 15,
+      "image": "assets/drinks/water.jpg"
+    },
+    {
+      "id": 50,
+      "category": "drink",
+      "name": {
+        "tr": "Çay",
+        "en": "Turkish Tea",
+        "ar": "شاي تركي"
+      },
+      "displayName": {
+        "tr": "Çay",
+        "en": "Turkish Tea",
+        "ar": "شاي تركي"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "ar": ""
+      },
+      "price": 15,
+      "image": "assets/drinks/tea.webp"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "2li-menu-300",
+      "active": true,
+      "startsAt": null,
+      "endsAt": "2026-12-01T00:00:00+03:00",
+      "price": 300,
+      "poster": "assets/campaigns/2li-menu-300.webp",
+      "thumbnail": "assets/campaigns/2li-menu-300-thumb.webp",
+      "eyebrow": {
+        "tr": "KASIM AYINA ÖZEL",
+        "ar": "عرض نوفمبر",
+        "en": "NOVEMBER SPECIAL"
+      },
+      "title": {
+        "tr": "2’li Menü",
+        "ar": "وجبة لشخصين",
+        "en": "Combo for Two"
+      },
+      "description": {
+        "tr": "İki kişilik falafel menüsü.",
+        "ar": "وجبة فلافل لشخصين.",
+        "en": "A falafel combo for two."
+      },
+      "items": [
+        {
+          "tr": "2 Falafel Dürüm",
+          "ar": "٢ ساندويتش فلافل",
+          "en": "2 falafel wraps"
+        },
+        {
+          "tr": "2 Eker Ayran",
+          "ar": "٢ عيران إيكر",
+          "en": "2 Eker ayrans"
+        }
+      ]
+    },
+    {
+      "id": "falafel-menu-250",
+      "active": true,
+      "startsAt": null,
+      "endsAt": null,
+      "price": 250,
+      "poster": "assets/campaigns/falafel-menu-250.webp",
+      "thumbnail": "assets/campaigns/falafel-menu-250-thumb.webp",
+      "title": {
+        "tr": "Falafel Menü",
+        "ar": "وجبة الفلافل",
+        "en": "Falafel Combo"
+      },
+      "description": {
+        "tr": "Dört lezzet bir arada.",
+        "ar": "أربع نكهات في وجبة واحدة.",
+        "en": "Four favourites, one combo."
+      },
+      "items": [
+        {
+          "tr": "Falafel Dürüm",
+          "ar": "ساندويتش فلافل",
+          "en": "Falafel wrap"
+        },
+        {
+          "tr": "Tahinli Muhallebi",
+          "ar": "مهلبية بالطحينة",
+          "en": "Tahini pudding"
+        },
+        {
+          "tr": "Şişe Cola Turka",
+          "ar": "كولا توركا — زجاجة",
+          "en": "Bottled Cola Turka"
+        },
+        {
+          "tr": "Çay",
+          "ar": "شاي",
+          "en": "Tea"
+        }
+      ]
+    },
+    {
+      "id": "lubnan-geceleri-150",
+      "active": true,
+      "startsAt": null,
+      "endsAt": null,
+      "price": 150,
+      "poster": "assets/campaigns/layali-poster-v2.webp",
+      "thumbnail": "assets/campaigns/layali-poster-v2.webp",
+      "eyebrow": {
+        "tr": "YENİ TATLI",
+        "ar": "حلوى جديدة",
+        "en": "NEW DESSERT"
+      },
+      "title": {
+        "tr": "Layali Lübnan",
+        "ar": "ليالي لبنان",
+        "en": "Lebanese Nights"
+      },
+      "description": {
+        "tr": "Yeni Lübnan tatlımızla tanışın.",
+        "ar": "اكتشفوا حلوانا اللبنانية الجديدة.",
+        "en": "Discover our new Lebanese dessert."
+      },
+      "items": [
+        {
+          "tr": "Geleneksel Lübnan tatlısı",
+          "ar": "حلوى لبنانية تقليدية",
+          "en": "Traditional Lebanese dessert"
+        }
+      ]
+    }
+  ]
+}
