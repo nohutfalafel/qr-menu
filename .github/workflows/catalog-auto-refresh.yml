@@ -1,0 +1,67 @@
+name: Refresh unified catalog after CMS or menu edits
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'menu-data.js'
+      - 'menu-ar.js'
+      - 'menu.js'
+      - 'cms/menu-prices.json'
+      - 'cms/campaigns.json'
+      - 'cms/product-ids.json'
+      - '.github/workflows/catalog-auto-refresh.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: qr-catalog-main
+  cancel-in-progress: false
+
+jobs:
+  refresh-public-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regenerate from existing website and live Pages CMS files
+        run: node scripts/generate-catalog.mjs --write
+      - name: Validate every product ID, translation, price and image
+        run: |
+          node scripts/generate-catalog.mjs --check
+          node --test scripts/catalog.test.mjs
+      - name: Commit generated catalog without touching customer UI
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add cms/catalog-v1.json cms/product-ids.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No catalog content change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(catalog): refresh stable-ID public catalog from website CMS"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Request a Pages rebuild after bot-generated commit
+        if: steps.commit.outputs.changed == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api -X POST "repos/$GITHUB_REPOSITORY/pages/builds"; then
+            echo "GitHub Pages rebuild requested"
+          else
+            echo "::warning::Pages rebuild request failed. Review site deployment; catalog commit is on main."
+          fi
