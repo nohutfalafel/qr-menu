@@ -28,6 +28,7 @@ const restaurantPhotos = {
  "Şambali Tatlısı": "assets/dessert-cutouts/sambali-one-almond.webp",
  "Tahinli Muhallebi": "assets/dessert-cutouts/tahinli-muhallebi.webp",
  "Layali Lübnan": "assets/dessert-cutouts/lubnan-geceleri-top.webp",
+ "1 Adet Falafel": "assets/side-cutouts/falafel-1-adet-20261114.webp",
  "Kıymalı Sembusek (4 Adet)": "assets/side-cutouts/sides.webp",
  "Nohut Özel Dürüm": "assets/wrap-cutouts/wraps-transparent.webp",
  "Falafel Dürüm": "assets/wrap-cutouts/wraps-transparent.webp",
