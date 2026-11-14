@@ -16,15 +16,15 @@
     for (const [category, products] of Object.entries(groups)) {
       if (!Array.isArray(products)) throw new Error('Invalid product category: ' + category);
       for (const product of products) {
-        if (!product || typeof product.name !== 'string' || !validPrice(product.price) ||
+        if (!product || typeof product.name !== 'string' || !validPrice(product.price) || (product.active !== undefined && typeof product.active !== 'boolean') ||
             proposed.has(product.name) || current.get(product.name)?.[0] !== category) {
           throw new Error('Invalid or duplicate menu price: ' + (product?.name || category));
         }
-        proposed.set(product.name, product.price);
+        proposed.set(product.name, { price: product.price, active: product.active !== false });
       }
     }
     if (proposed.size !== current.size) throw new Error('Missing menu prices');
-    for (const [name, price] of proposed) current.get(name)[3] = price;
+    for (const [name, change] of proposed) { current.get(name)[3] = change.price; current.get(name)[6] = change.active; }
     window.dispatchEvent(new Event('nohut:prices-updated'));
   }).catch(error => console.error('Nohut menu CMS:', error));
 
