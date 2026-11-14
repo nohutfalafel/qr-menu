@@ -150,7 +150,8 @@
     },
     {
       "name": "Şambali Tatlısı",
-      "price": 70
+      "price": 70,
+      "active": false
     },
     {
       "name": "Tahinli Muhallebi",
