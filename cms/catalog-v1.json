@@ -629,6 +629,28 @@
       "image": "assets/meze-cutouts/karisik-meze-tabagi-20261114.webp"
     },
     {
+      "id": 53,
+      "category": "side",
+      "name": {
+        "tr": "1 Adet Falafel",
+        "en": "1 Falafel Piece",
+        "ar": "حبة فلافل واحدة"
+      },
+      "displayName": {
+        "tr": "1 Adet Falafel",
+        "en": "1 Falafel Piece",
+        "ar": "حبة فلافل واحدة"
+      },
+      "description": {
+        "tr": "1 adet çıtır falafel",
+        "en": "One crispy falafel piece",
+        "ar": "حبة فلافل مقرمشة"
+      },
+      "price": 15,
+      "active": true,
+      "image": "assets/side-cutouts/falafel-1-adet-20261114.webp"
+    },
+    {
       "id": 22,
       "category": "side",
       "name": {
