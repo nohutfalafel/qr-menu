@@ -14,8 +14,8 @@ content:
         label: Dürümler
         type: object
         list:
-          min: 5
-          max: 5
+          min: 6
+          max: 6
           collapsible:
             collapsed: true
             summary: "{name} — {price} TL"
@@ -134,8 +134,8 @@ content:
         label: Tatlı
         type: object
         list:
-          min: 2
-          max: 2
+          min: 3
+          max: 3
           collapsible:
             collapsed: true
             summary: "{name} — {price} TL"
