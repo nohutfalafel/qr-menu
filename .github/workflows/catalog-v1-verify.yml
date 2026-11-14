@@ -1,0 +1,37 @@
+name: QR catalog v1 consistency
+on:
+  push:
+    paths:
+      - 'menu-data.js'
+      - 'menu-ar.js'
+      - 'menu.js'
+      - 'cms/**'
+      - 'scripts/**'
+      - '.github/workflows/catalog-v1-verify.yml'
+  pull_request:
+    paths:
+      - 'menu-data.js'
+      - 'menu-ar.js'
+      - 'menu.js'
+      - 'cms/**'
+      - 'scripts/**'
+      - '.github/workflows/catalog-v1-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  catalog-parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check generator syntax
+        run: node --check scripts/generate-catalog.mjs
+      - name: Verify generated JSON equals current site content
+        run: node scripts/generate-catalog.mjs --check
+      - name: Validate stable IDs, multilingual content, images, and CMS prices
+        run: node --test scripts/catalog.test.mjs
