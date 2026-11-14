@@ -72,7 +72,9 @@ export function buildCatalog(){
       assert(!priceNames.has(row.name),'Duplicate CMS name '+row.name);
       assert(typeof row.name==='string'&&Number.isFinite(row.price)&&
         row.price>=0&&row.price<=100000,'Invalid price '+row.name);
-      priceNames.set(row.name,{category:group,price:row.price});
+      assert(row.active===undefined||typeof row.active==='boolean',
+        'Invalid visibility for '+row.name);
+      priceNames.set(row.name,{category:group,price:row.price,active:row.active});
     }
   }
   for(const item of data){
@@ -111,6 +113,7 @@ export function buildCatalog(){
       displayName:trilingual(display?.[0]??name,display?.[1]??en,arName,name),
       description:trilingual(descriptionTr,descriptionEn,arDescription,name),
       price:priceNames.get(name).price,
+      active:priceNames.get(name).active!==false,
       image
     };
   });

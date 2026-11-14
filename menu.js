@@ -423,7 +423,7 @@ function renderMenu(){
  byId('search').setAttribute('aria-label',lang==='ar'?'البحث في قائمة الطعام':tr?'Menüde ara':'Search menu');
  const normalize=value=>String(value).toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ı/g,'i').replace(/[\u064B-\u065F\u0670\u0640]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي');
  const query=normalize(byId('search').value.trim());
- let items=data.filter(item=>(searching||category==='all'||category===item[0])&&normalize([item[1],item[2],item[4],item[5],...arabicMenu.items[item[1]],...(drinkDisplayNames[item[1]]||[])].join(' ')).includes(query));
+ let items=data.filter(item=>item[6]!==false&&(searching||category==='all'||category===item[0])&&normalize([item[1],item[2],item[4],item[5],...arabicMenu.items[item[1]],...(drinkDisplayNames[item[1]]||[])].join(' ')).includes(query));
  if(!searching&&category==='drink')items=items.slice().sort((a,b)=>{
   const rank=item=>drinkOrder.includes(item[1])?drinkOrder.indexOf(item[1]):drinkOrder.length+data.indexOf(item);
   return rank(a)-rank(b);

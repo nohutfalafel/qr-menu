@@ -141,6 +141,7 @@
         "ar": "فلافل، حمص، خس، بندورة، خيار طازج ونعناع"
       },
       "price": 140,
+      "active": true,
       "image": "assets/wrap-cutouts/vegan-transparent.webp"
     },
     {
@@ -162,6 +163,7 @@
         "ar": "فلافل، حمص بالطحينة، خس، بندورة، خيار طازج، نعناع وصلصة الطرطور"
       },
       "price": 140,
+      "active": true,
       "image": "assets/wrap-cutouts/wraps-transparent.webp"
     },
     {
@@ -183,6 +185,7 @@
         "ar": "بطاطا مقلية، حمص بالطحينة، خس، بندورة، خيار طازج، نعناع وصلصة الطرطور"
       },
       "price": 135,
+      "active": true,
       "image": "assets/wrap-cutouts/wraps-transparent.webp"
     },
     {
@@ -204,6 +207,7 @@
         "ar": "فلافل، باذنجان مقلي، حمص بالطحينة، متبّل باذنجان، خس، بندورة، خيار طازج، نعناع وصلصة الطرطور"
       },
       "price": 185,
+      "active": true,
       "image": "assets/wrap-cutouts/wraps-transparent.webp"
     },
     {
@@ -225,6 +229,7 @@
         "ar": "فلافل، بطاطا مقلية، باذنجان مقلي، حمص بالطحينة، متبّل باذنجان، خس، بندورة، خيار طازج، نعناع وصلصة الطرطور"
       },
       "price": 195,
+      "active": true,
       "image": "assets/wrap-cutouts/wraps-transparent.webp"
     },
     {
@@ -246,6 +251,7 @@
         "ar": "فلافل، بطاطا مقلية، حمص بالطحينة، خس، بندورة، خيار طازج، نعناع وصلصة الطرطور"
       },
       "price": 185,
+      "active": true,
       "image": "assets/wrap-cutouts/wraps-transparent.webp"
     },
     {
@@ -267,6 +273,7 @@
         "ar": "6 حبات فلافل مع حمص بالطحينة، بابا غنوج ومتبل باذنجان"
       },
       "price": 200,
+      "active": true,
       "image": "assets/platter-cutouts/falafel-porsiyon.webp"
     },
     {
@@ -288,6 +295,7 @@
         "ar": "4 حبات فلافل، 2 سمبوسك بالسبانخ، 3 قطع ورق عنب، بابا غنوج وحمص بالطحينة"
       },
       "price": 320,
+      "active": true,
       "image": "assets/platter-cutouts/vegan-2-sembusek-20261029.webp"
     },
     {
@@ -309,6 +317,7 @@
         "ar": "4 حبات فلافل، حبة كبة، 2 سمبوسك بالسبانخ وحمص بالطحينة"
       },
       "price": 350,
+      "active": true,
       "image": "assets/platter-cutouts/nohut-1-kibbe-2-sembusek-20261029.webp"
     },
     {
@@ -330,6 +339,7 @@
         "ar": "4 حبات فلافل، حبتا سمبوسك باللحمة وحمص بالطحينة"
       },
       "price": 300,
+      "active": true,
       "image": "assets/platter-cutouts/beyrut-2-kiymali-sembusek.webp"
     },
     {
@@ -351,6 +361,7 @@
         "ar": "فول مع الثوم وزيت الزيتون والبقدونس والبندورة"
       },
       "price": 160,
+      "active": true,
       "image": "assets/platter-cutouts/bakla-no-yogurt-20261029.webp"
     },
     {
@@ -372,6 +383,7 @@
         "ar": "فول مع اللبن"
       },
       "price": 180,
+      "active": true,
       "image": "assets/platter-cutouts/bakla.webp"
     },
     {
@@ -393,6 +405,7 @@
         "ar": "حمص مسلوق، لبن بالطحينة والثوم، وخبز لبناني مقرمش"
       },
       "price": 250,
+      "active": true,
       "image": "assets/platter-cutouts/fatte-pair-20261028.webp"
     },
     {
@@ -414,6 +427,7 @@
         "ar": "فتة لبنانية بالباذنجان"
       },
       "price": 260,
+      "active": true,
       "image": "assets/platter-cutouts/fatte-selected-three-20261028.webp"
     },
     {
@@ -435,6 +449,7 @@
         "ar": "فتة مغطّاة بالزبدة والمكسرات"
       },
       "price": 280,
+      "active": true,
       "image": "assets/platter-cutouts/fatte-pair-20261028.webp"
     },
     {
@@ -456,6 +471,7 @@
         "ar": "فتة مع لحم محمّر"
       },
       "price": 330,
+      "active": true,
       "image": "assets/platter-cutouts/kavurmali-fatte-20261027.webp"
     },
     {
@@ -477,6 +493,7 @@
         "ar": "حمص مهروس مع الطحينة"
       },
       "price": 160,
+      "active": true,
       "image": "assets/meze-cutouts/sade-humus-top.webp"
     },
     {
@@ -498,6 +515,7 @@
         "ar": "حمص مع الكاجو والفستق الحلبي واللوز"
       },
       "price": 250,
+      "active": true,
       "image": "assets/meze-cutouts/kuruyemisli-humus.webp"
     },
     {
@@ -519,6 +537,7 @@
         "ar": "حمص بالطحينة والشمندر"
       },
       "price": 180,
+      "active": true,
       "image": "assets/meze-cutouts/pancarli-humus.webp"
     },
     {
@@ -540,6 +559,7 @@
         "ar": "متبّل من الباذنجان"
       },
       "price": 160,
+      "active": true,
       "image": "assets/meze-cutouts/mutebbel.webp"
     },
     {
@@ -561,6 +581,7 @@
         "ar": "مقبلات من الباذنجان على الطريقة اللبنانية"
       },
       "price": 170,
+      "active": true,
       "image": "assets/meze-cutouts/babagannus-updated.webp"
     },
     {
@@ -582,6 +603,7 @@
         "ar": "مقبلات بالفلفل"
       },
       "price": 160,
+      "active": true,
       "image": "assets/meze-cutouts/muhammara.webp"
     },
     {
@@ -603,6 +625,7 @@
         "ar": "تشكيلة من المقبلات اللبنانية"
       },
       "price": 200,
+      "active": true,
       "image": null
     },
     {
@@ -624,6 +647,7 @@
         "ar": "كبة لبنانية محشية"
       },
       "price": 330,
+      "active": true,
       "image": "assets/products/kibbe-6003492c.jpg"
     },
     {
@@ -645,6 +669,7 @@
         "ar": "فطائر صغيرة محشية باللحمة المفرومة"
       },
       "price": 250,
+      "active": true,
       "image": "assets/side-cutouts/sides.webp"
     },
     {
@@ -666,6 +691,7 @@
         "ar": "فطائر صغيرة محشية بالسبانخ"
       },
       "price": 180,
+      "active": true,
       "image": "assets/side-cutouts/sides.webp"
     },
     {
@@ -687,6 +713,7 @@
         "ar": "فطائر صغيرة محشية بالجبنة"
       },
       "price": 190,
+      "active": true,
       "image": "assets/side-cutouts/cheese-sembusek.webp"
     },
     {
@@ -708,6 +735,7 @@
         "ar": "ورق عنب محشي"
       },
       "price": 180,
+      "active": true,
       "image": "assets/products/tgo-9295403_1738157981309.jpg"
     },
     {
@@ -729,6 +757,7 @@
         "ar": "بطاطا مقلية"
       },
       "price": 150,
+      "active": true,
       "image": "assets/side-cutouts/sides.webp"
     },
     {
@@ -750,6 +779,7 @@
         "ar": "شرائح باذنجان مقلية"
       },
       "price": 150,
+      "active": true,
       "image": null
     },
     {
@@ -771,6 +801,7 @@
         "ar": "سلطة طازجة مع الفلافل"
       },
       "price": 200,
+      "active": true,
       "image": "assets/salad-cutouts/salads.webp"
     },
     {
@@ -792,6 +823,7 @@
         "ar": "سلطة لبنانية بالبقدونس والبرغل"
       },
       "price": 165,
+      "active": true,
       "image": "assets/salad-cutouts/salads.webp"
     },
     {
@@ -813,6 +845,7 @@
         "ar": "سلطة لبنانية مع قطع الخبز المقرمشة"
       },
       "price": 185,
+      "active": true,
       "image": "assets/salad-cutouts/salads.webp"
     },
     {
@@ -834,6 +867,7 @@
         "ar": "حلوى لبنانية تقليدية"
       },
       "price": 150,
+      "active": true,
       "image": "assets/dessert-cutouts/lubnan-geceleri-poster-bowl.webp"
     },
     {
@@ -855,6 +889,7 @@
         "ar": "حلوى سميد تركية تقليدية"
       },
       "price": 70,
+      "active": false,
       "image": "assets/dessert-cutouts/sambali-one-almond.webp"
     },
     {
@@ -876,6 +911,7 @@
         "ar": "مهلبية ناعمة بنكهة الطحينة"
       },
       "price": 90,
+      "active": true,
       "image": "assets/dessert-cutouts/tahinli-muhallebi.webp"
     },
     {
@@ -897,6 +933,7 @@
         "ar": "عيران إكر باللبن"
       },
       "price": 40,
+      "active": true,
       "image": "assets/drinks/eker-large.png"
     },
     {
@@ -918,6 +955,7 @@
         "ar": "عيران إكر باللبن"
       },
       "price": 25,
+      "active": true,
       "image": "assets/drinks/eker-small.webp"
     },
     {
@@ -939,6 +977,7 @@
         "ar": "مشروب نيغدة الغازي"
       },
       "price": 45,
+      "active": true,
       "image": "assets/drinks/nigde.jpg"
     },
     {
@@ -960,6 +999,7 @@
         "ar": "مشروب تشامليجا الغازي"
       },
       "price": 45,
+      "active": true,
       "image": "assets/drinks/camlica.jpg"
     },
     {
@@ -981,6 +1021,7 @@
         "ar": "سادة"
       },
       "price": 35,
+      "active": true,
       "image": "assets/drinks/beypazari-plain.png"
     },
     {
@@ -1002,6 +1043,7 @@
         "ar": "غازية بنكهة اليوسفي"
       },
       "price": 35,
+      "active": true,
       "image": "assets/drinks/beypazari-mandarin.png"
     },
     {
@@ -1023,6 +1065,7 @@
         "ar": "زجاجة كولا توركا"
       },
       "price": 35,
+      "active": true,
       "image": "assets/drinks/cola-bottle.jpg"
     },
     {
@@ -1044,6 +1087,7 @@
         "ar": "علبة كولا توركا"
       },
       "price": 45,
+      "active": true,
       "image": "assets/drinks/cola-can.jpg"
     },
     {
@@ -1065,6 +1109,7 @@
         "ar": "مشروب الشلغم التركي المخمّر، حار"
       },
       "price": 35,
+      "active": true,
       "image": "assets/drinks/doganay-spicy.webp"
     },
     {
@@ -1086,6 +1131,7 @@
         "ar": "مشروب الشلغم التركي المخمّر، غير حار"
       },
       "price": 35,
+      "active": true,
       "image": "assets/drinks/doganay-mild.webp"
     },
     {
@@ -1107,6 +1153,7 @@
         "ar": "بنكهة الليمون"
       },
       "price": 45,
+      "active": true,
       "image": "assets/drinks/didi-lemon.jpg"
     },
     {
@@ -1128,6 +1175,7 @@
         "ar": "بنكهة الفراولة"
       },
       "price": 45,
+      "active": true,
       "image": "assets/drinks/didi-strawberry.jpg"
     },
     {
@@ -1149,6 +1197,7 @@
         "ar": "بنكهة الخوخ"
       },
       "price": 45,
+      "active": true,
       "image": "assets/drinks/didi-peach.jpg"
     },
     {
@@ -1170,6 +1219,7 @@
         "ar": "مشروب غازي بنكهة البرتقال"
       },
       "price": 45,
+      "active": true,
       "image": "assets/drinks/sariyer-orange.jpg"
     },
     {
@@ -1191,6 +1241,7 @@
         "ar": "مشروب غازي بنكهة اليوسفي"
       },
       "price": 45,
+      "active": true,
       "image": "assets/drinks/sariyer-mandarin.jpg"
     },
     {
@@ -1212,6 +1263,7 @@
         "ar": ""
       },
       "price": 15,
+      "active": true,
       "image": "assets/drinks/water.jpg"
     },
     {
@@ -1233,6 +1285,7 @@
         "ar": ""
       },
       "price": 15,
+      "active": true,
       "image": "assets/drinks/tea.webp"
     }
   ],

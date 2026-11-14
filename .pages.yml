@@ -150,6 +150,11 @@ content:
             required: true
             options:
               min: 0
+          - name: active
+            label: QR Menü / POS'ta göster
+            description: Kapatılırsa ürün gizlenir, fiyat ve geçmiş satışlar saklanır.
+            type: boolean
+            default: true
       - name: drink
         label: İçecekler
         type: object

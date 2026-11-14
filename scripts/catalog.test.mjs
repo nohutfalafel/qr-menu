@@ -84,3 +84,26 @@ test('all directly exposed product and campaign image assets exist',()=>{
     }
   }
 });
+
+
+test('Şambali is hidden, reversible, and retains historic stable ID 32',()=>{
+  const dessert=cms.dessert;
+  const row=dessert.find(p=>p.name==='Şambali Tatlısı');
+  assert.ok(row);
+  assert.equal(row.price,70);
+  assert.equal(row.active,false);
+  const archived=catalog.products.find(p=>p.name.tr==='Şambali Tatlısı');
+  assert.ok(archived);
+  assert.equal(archived.id,32);
+  assert.equal(archived.active,false);
+  assert.equal(registry.byName['Şambali Tatlısı'],32);
+  assert.equal(catalog.products.length,53);
+  assert.equal(catalog.products.filter(p=>p.active!==false).length,52);
+  assert.equal(catalog.products.filter(p=>p.category==='dessert' && p.active!==false).length,2);
+  const fallback=fs.readFileSync(path.join(root,'menu-data.js'),'utf8');
+  const renderer=fs.readFileSync(path.join(root,'menu.js'),'utf8');
+  const cmsUpdater=fs.readFileSync(path.join(root,'cms-live.js'),'utf8');
+  assert.match(fallback,/\['dessert','Şambali Tatlısı'[^\n]*,false\]/);
+  assert.match(renderer,/item\[6\]!==false/);
+  assert.match(cmsUpdater,/change\.active/);
+});

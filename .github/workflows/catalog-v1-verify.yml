@@ -27,6 +27,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Check JavaScript syntax (customer QR renderer and CMS)
+        run: |
+          node --check menu-data.js
+          node --check menu.js
+          node --check cms-live.js
       - name: Check generator syntax
         run: node --check scripts/generate-catalog.mjs
       - name: Verify generated JSON equals current site content
