@@ -75,18 +75,38 @@ vegan certification, or exclusions from this export.
    then regenerate. The generator deliberately refuses disappeared names
    until their ID migration has been reviewed. New products get the next ID.
 
-**Important:** Pages CMS currently updates `cms/menu-prices.json` and
-`cms/campaigns.json` independently. It does **not yet** regenerate this
-sidecar automatically. Until an approved post-CMS regeneration/deployment
-workflow exists, `catalog-v1.json` is a versioned snapshot, not the
-real-time price source. The current QR website keeps reading the live CMS
-files; the existing Flutter price-sync prototype also keeps using them.
+## Automatic regeneration after approved edits
 
-## Next step (requires separate review)
+The workflow `.github/workflows/catalog-auto-refresh.yml` runs after changes
+to the menu source or CMS price/campaign files reach `main`. It generates
+`cms/catalog-v1.json` and `cms/product-ids.json`, validates their full parity,
+and commits the generated files through the GitHub Actions bot only if changed.
+It requests a GitHub Pages rebuild after committing. If the repository denies
+Actions write access or Pages rebuild permissions, the workflow reports the
+failure/warning in GitHub Actions; do not assume automatic publishing succeeded
+until a real CMS edit has been validated end-to-end.
 
-Add an authenticated, reliable post-CMS export/deploy process so the catalog
-regenerates after approved price, campaign, product, or image updates.
-After that, migrate Flutter's reader to stable `id` matching (with an
-explicit legacy-ID verification), keeping old order-line prices untouched.
-Never install a new POS build on the restaurant laptop without CI, database
-backup, and operator acceptance testing.
+**Important:** the customer-facing QR website still reads the same original
+JavaScript and public CMS files; the new JSON is additive. The Windows POS
+integration reads immutable IDs and localized text/image paths from the catalog,
+and overlays LIVE `cms/menu-prices.json` and `cms/campaigns.json`. As a result,
+ordinary CMS price and campaign changes do not wait for catalog regeneration
+to reach the POS. A newly-added, renamed or removed product needs a consistent
+source update and stable-ID export; until the generated catalog matches the
+public CMS keys, POS refuses the import and keeps its previous local prices.
+
+**No automatic destructive deletion:** local POS-only products are kept. The
+same numeric ID is never reused, and existing order lines/financial records
+remain historical snapshots. Photos in the catalog are source assets; the POS
+needs internet to show a newly downloaded image and provides an offline icon.
+
+## Deployment checks
+
+1. Confirm catalog workflow and Pages deployment succeeded after actual CMS
+   edits; check the committed JSON diff and the live public URL.
+2. Confirm Flutter Windows CI succeeds and the stable IDs 0–52 align with the
+   existing restaurant SQLite menu.
+3. Make a SQLite backup, then install the new Windows build and verify prices,
+   product names, images, offline behavior and historical paid orders.
+4. Keep the `QR Menü otomatik eşitleme` switch off if the restaurant prefers
+   owner-only local price overrides.
