@@ -94,8 +94,8 @@ content:
         label: Diğer
         type: object
         list:
-          min: 7
-          max: 7
+          min: 8
+          max: 8
           collapsible:
             collapsed: true
             summary: "{name} — {price} TL"
