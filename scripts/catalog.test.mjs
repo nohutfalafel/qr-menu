@@ -98,8 +98,8 @@ test('Şambali is hidden, reversible, and retains historic stable ID 32',()=>{
   assert.equal(archived.id,32);
   assert.equal(archived.active,false);
   assert.equal(registry.byName['Şambali Tatlısı'],32);
-  assert.equal(catalog.products.length,53);
-  assert.equal(catalog.products.filter(p=>p.active!==false).length,52);
+  assert.equal(catalog.products.length,54);
+  assert.equal(catalog.products.filter(p=>p.active!==false).length,53);
   assert.equal(catalog.products.filter(p=>p.category==='dessert' && p.active!==false).length,2);
   const fallback=fs.readFileSync(path.join(root,'menu-data.js'),'utf8');
   const renderer=fs.readFileSync(path.join(root,'menu.js'),'utf8');
@@ -126,4 +126,31 @@ test('Karışık Meze Tabağı uses the approved square image and keeps its prod
     '6bd0956e9561337b74a0aa3d3a61810e2dd70cde');
   const renderer=fs.readFileSync(path.join(root,'menu.js'),'utf8');
   assert.ok(renderer.includes('"Karışık Meze Tabağı": "'+photoPath+'"'));
+});
+
+
+test('1 Adet Falafel appears in Diğer for 15 TL with new permanent ID',()=>{
+  const item=catalog.products.find(p=>p.id===53);
+  assert.ok(item);
+  assert.equal(registry.byName['1 Adet Falafel'],53);
+  assert.equal(registry.nextId,54);
+  assert.equal(item.category,'side');
+  assert.equal(item.price,15);
+  assert.equal(item.active,true);
+  assert.deepEqual(item.name,{
+    tr:'1 Adet Falafel',en:'1 Falafel Piece',ar:'حبة فلافل واحدة'
+  });
+  assert.equal(item.description.ar,'حبة فلافل مقرمشة');
+  assert.equal(item.image,'assets/side-cutouts/falafel-1-adet-20261114.webp');
+  const sideRow=cms.side.find(p=>p.name==='1 Adet Falafel');
+  assert.equal(sideRow?.price,15);
+  assert.equal(cms.side.length,8);
+  const image=fs.readFileSync(path.join(root,item.image));
+  assert.equal(image.subarray(0,4).toString('ascii'),'RIFF');
+  assert.equal(image.subarray(8,12).toString('ascii'),'WEBP');
+  assert.equal(image.readUInt32LE(4)+8,image.length);
+  const menuData=fs.readFileSync(path.join(root,'menu-data.js'),'utf8');
+  assert.match(menuData,/\['side','1 Adet Falafel','1 Falafel Piece',15/);
+  const renderer=fs.readFileSync(path.join(root,'menu.js'),'utf8');
+  assert.ok(renderer.includes('"1 Adet Falafel": "'+item.image+'"'));
 });

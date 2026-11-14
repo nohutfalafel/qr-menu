@@ -24,6 +24,7 @@ const data=[
 ['meze','Babagannuş','Baba Ghanoush',170,'Patlıcanlı meze','Traditional eggplant appetizer'],
 ['meze','Muhammara','Muhammara (Pepper Dip)',160,'Biberli meze','A flavourful pepper-based dip'],
 ['meze','Karışık Meze Tabağı','Assorted Appetizer Platter',200,'Karışık meze','A selection of our appetizers'],
+['side','1 Adet Falafel','1 Falafel Piece',15,'1 adet çıtır falafel','One crispy falafel piece'],
 ['side','Kibbe (3 Adet)','Kibbeh (3 Pieces)',330,'Lübnan usulü içli köfte','Three Lebanese-style stuffed bulgur croquettes'],
 ['side','Kıymalı Sembusek (4 Adet)','Meat Sambousek (4 Pieces)',250,'Kıymalı hamur işi','Four savoury pastries filled with minced meat'],
 ['side','Ispanaklı Sembusek (4 Adet)','Spinach Sambousek (4 Pieces)',180,'Ispanaklı hamur işi','Four pastries filled with spinach'],

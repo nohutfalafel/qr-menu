@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "nextId": 53,
+  "nextId": 54,
   "byName": {
     "Falafel Dürüm": 0,
     "Patates Dürüm": 1,
@@ -54,6 +54,7 @@
     "Su": 49,
     "Çay": 50,
     "Vegan Dürüm": 51,
-    "Layali Lübnan": 52
+    "Layali Lübnan": 52,
+    "1 Adet Falafel": 53
   }
 }

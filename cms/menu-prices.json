@@ -101,6 +101,10 @@
   ],
   "side": [
     {
+      "name": "1 Adet Falafel",
+      "price": 15
+    },
+    {
       "name": "Kibbe (3 Adet)",
       "price": 330
     },
