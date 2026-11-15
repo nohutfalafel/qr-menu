@@ -1130,7 +1130,7 @@
         "en": "Spicy Turkish fermented turnip drink",
         "ar": "مشروب الشلغم التركي المخمّر، حار"
       },
-      "price": 35,
+      "price": 40,
       "active": true,
       "image": "assets/drinks/doganay-spicy.webp"
     },
@@ -1152,7 +1152,7 @@
         "en": "Turkish fermented turnip drink, not spicy",
         "ar": "مشروب الشلغم التركي المخمّر، غير حار"
       },
-      "price": 35,
+      "price": 40,
       "active": true,
       "image": "assets/drinks/doganay-mild.webp"
     },
