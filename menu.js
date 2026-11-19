@@ -33,6 +33,7 @@ const restaurantPhotos = {
  "Nohut Özel Dürüm": "assets/wrap-cutouts/wraps-transparent.webp",
  "Falafel Dürüm": "assets/wrap-cutouts/wraps-transparent.webp",
  "Patatesli Patlıcanlı Falafel Dürüm": "assets/wrap-cutouts/wraps-transparent.webp",
+ "İçli Köfte (1 Adet)": "assets/side-cutouts/kibbe-1-adet-transparent.svg",
  "Kibbe (3 Adet)": "assets/products/kibbe-6003492c.jpg",
  "Sarma (6 Adet)": "assets/products/tgo-9295403_1738157981309.jpg",
  "Tereyağlı Fatte": "assets/platter-cutouts/fatte-pair-20261028.webp",

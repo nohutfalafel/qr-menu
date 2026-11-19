@@ -98,8 +98,8 @@ test('Şambali is hidden, reversible, and retains historic stable ID 32',()=>{
   assert.equal(archived.id,32);
   assert.equal(archived.active,false);
   assert.equal(registry.byName['Şambali Tatlısı'],32);
-  assert.equal(catalog.products.length,54);
-  assert.equal(catalog.products.filter(p=>p.active!==false).length,53);
+  assert.equal(catalog.products.length,55);
+  assert.equal(catalog.products.filter(p=>p.active!==false).length,54);
   assert.equal(catalog.products.filter(p=>p.category==='dessert' && p.active!==false).length,2);
   const fallback=fs.readFileSync(path.join(root,'menu-data.js'),'utf8');
   const renderer=fs.readFileSync(path.join(root,'menu.js'),'utf8');
@@ -133,7 +133,7 @@ test('1 Adet Falafel appears in Diğer for 15 TL with new permanent ID',()=>{
   const item=catalog.products.find(p=>p.id===53);
   assert.ok(item);
   assert.equal(registry.byName['1 Adet Falafel'],53);
-  assert.equal(registry.nextId,54);
+  assert.equal(registry.nextId,55);
   assert.equal(item.category,'side');
   assert.equal(item.price,15);
   assert.equal(item.active,true);
@@ -144,7 +144,7 @@ test('1 Adet Falafel appears in Diğer for 15 TL with new permanent ID',()=>{
   assert.equal(item.image,'assets/side-cutouts/falafel-1-adet-20261114.webp');
   const sideRow=cms.side.find(p=>p.name==='1 Adet Falafel');
   assert.equal(sideRow?.price,15);
-  assert.equal(cms.side.length,8);
+  assert.equal(cms.side.length,9);
   const image=fs.readFileSync(path.join(root,item.image));
   assert.equal(image.subarray(0,4).toString('ascii'),'RIFF');
   assert.equal(image.subarray(8,12).toString('ascii'),'WEBP');
@@ -153,4 +153,20 @@ test('1 Adet Falafel appears in Diğer for 15 TL with new permanent ID',()=>{
   assert.match(menuData,/\['side','1 Adet Falafel','1 Falafel Piece',15/);
   const renderer=fs.readFileSync(path.join(root,'menu.js'),'utf8');
   assert.ok(renderer.includes('"1 Adet Falafel": "'+item.image+'"'));
+});
+
+
+test('İçli Köfte is offered as one transparent cutout for 110 TL',()=>{
+  const item=catalog.products.find(p=>p.id===54);
+  assert.equal(item?.name.tr,'İçli Köfte (1 Adet)');
+  assert.equal(item.category,'side');
+  assert.equal(item.price,110);
+  assert.equal(item.name.en,'Kibbeh (1 Piece)');
+  assert.equal(item.name.ar,'كبة (حبة واحدة)');
+  assert.equal(item.image,'assets/side-cutouts/kibbe-1-adet-transparent.svg');
+  assert.equal(registry.byName['İçli Köfte (1 Adet)'],54);
+  assert.equal(cms.side.find(p=>p.name==='İçli Köfte (1 Adet)')?.price,110);
+  const image=fs.readFileSync(path.join(root,item.image),'utf8');
+  assert.match(image,/<svg /);
+  assert.match(image,/clipPath/);
 });

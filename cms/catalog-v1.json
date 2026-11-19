@@ -651,6 +651,28 @@
       "image": "assets/side-cutouts/falafel-1-adet-20261114.webp"
     },
     {
+      "id": 54,
+      "category": "side",
+      "name": {
+        "tr": "İçli Köfte (1 Adet)",
+        "en": "Kibbeh (1 Piece)",
+        "ar": "كبة (حبة واحدة)"
+      },
+      "displayName": {
+        "tr": "İçli Köfte (1 Adet)",
+        "en": "Kibbeh (1 Piece)",
+        "ar": "كبة (حبة واحدة)"
+      },
+      "description": {
+        "tr": "1 adet Lübnan usulü içli köfte (kibbe)",
+        "en": "One Lebanese-style stuffed bulgur croquette",
+        "ar": "حبة كبة لبنانية محشية"
+      },
+      "price": 110,
+      "active": true,
+      "image": "assets/side-cutouts/kibbe-1-adet-transparent.svg"
+    },
+    {
       "id": 22,
       "category": "side",
       "name": {
