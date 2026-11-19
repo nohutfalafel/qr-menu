@@ -437,7 +437,9 @@ function renderMenu(){
   const categoryTag=searching?`<p class="dish-category">${escapeHtml(categoryLabel)}</p>`:'';
   const price=item[3]==null?'':`${escapeHtml(item[3])} TL`;
   const desc=item[0]==='drink'?'':`<p class="desc">${escapeHtml(menuDescription(item))}</p>`;
-  return `<article class="dish"><div class="art${isMenuCutout(item)?' cutout-art':''}">${productVisual(item,index)}${(item[1]==='Layali Lübnan'||item[1]==='Vegan Dürüm')?`<span class="dish-new">${lang==='ar'?'جديد':lang==='en'?'NEW':'YENİ'}</span>`:''}</div><div class="dish-text">${categoryTag}<h3 class="name">${escapeHtml(displayName)}</h3><span class="price" dir="ltr">${price}</span>${desc}</div></article>`;
+  const unavailable=item[7]===false;
+  const availabilityBadge=unavailable?`<span class="dish-unavailable-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M5.6 18.4 18.4 5.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>${lang==='ar'?'غير متوفر حالياً':lang==='en'?'Currently unavailable':'Şuan mevcut değil'}</span></span>`:'';
+  return `<article class="dish${unavailable?' dish--unavailable':''}"><div class="art${isMenuCutout(item)?' cutout-art':''}">${productVisual(item,index)}${availabilityBadge}${(item[1]==='Layali Lübnan'||item[1]==='Vegan Dürüm')?`<span class="dish-new">${lang==='ar'?'جديد':lang==='en'?'NEW':'YENİ'}</span>`:''}</div><div class="dish-text">${categoryTag}<h3 class="name">${escapeHtml(displayName)}</h3><span class="price" dir="ltr">${price}</span>${desc}</div></article>`;
  }).join('');
  deferSvgFoodPhotos();
  byId('grid').querySelectorAll('img').forEach(image=>image.addEventListener('error',()=>{image.hidden=true;image.nextElementSibling.hidden=false;},{once:true}));
