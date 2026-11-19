@@ -70,6 +70,11 @@ content:
             required: true
             options:
               min: 0
+          - name: available
+            label: Şu an mevcut
+            description: Kapalıysa ürün menüde "Şuan mevcut değil" etiketiyle gösterilir; gizlenmez.
+            type: boolean
+            default: true
       - name: meze
         label: Mezeler
         type: object
@@ -175,6 +180,11 @@ content:
             required: true
             options:
               min: 0
+          - name: available
+            label: Şu an mevcut
+            description: Kapalıysa ürün menüde "Şuan mevcut değil" etiketiyle gösterilir; gizlenmez.
+            type: boolean
+            default: true
   - name: campaigns
     label: Kampanyalar
     type: file
