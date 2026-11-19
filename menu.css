@@ -182,3 +182,12 @@ footer img{object-fit:contain;border-radius:50%;background:#fbf9f3;padding:5px}
 
 .dish .art { position: relative; }
 .dish .dish-new { position:absolute; z-index:2; inset-block-start:10px; inset-inline-start:10px; display:inline-flex; align-items:center; width:max-content; background:#18523c; color:#fffaf0; border:1px solid #d4b564; border-radius:999px; padding:4px 10px; margin:0; font-size:.68rem; font-weight:700; letter-spacing:.06em; line-height:1.2; box-shadow:0 2px 5px #163b2e22; }
+
+/* Temporary stock status: items remain listed with their original prices. */
+.dish--unavailable{background:#f7f1ea;border-color:#e9ddd4}
+.dish--unavailable .art>:not(.dish-unavailable-badge){opacity:.45;filter:grayscale(.25)}
+.dish--unavailable .dish-text{opacity:.68}
+.dish-unavailable-badge{position:absolute;z-index:3;inset-block-start:9px;left:50%;transform:translateX(-50%);max-width:calc(100% - 12px);display:inline-flex;align-items:center;justify-content:center;gap:5px;padding:6px 9px;border-radius:999px;border:1px solid #fff8;background:linear-gradient(135deg,#ad382e,#922820);box-shadow:0 3px 10px #50221825;color:#fff;font-size:clamp(11px,1.1vw,15px);font-weight:700;line-height:1.12;text-align:center;white-space:normal}
+.dish-unavailable-badge svg{width:15px;height:15px;flex:0 0 15px}
+@media(max-width:600px){.dish-unavailable-badge{inset-block-start:6px;max-width:calc(100% - 10px);font-size:11px;padding:5px 6px;gap:4px}.dish-unavailable-badge svg{width:13px;height:13px;flex-basis:13px}}
+[dir=rtl] .dish-unavailable-badge{font-family:'Noto Sans Arabic',Tahoma,Arial,sans-serif;font-size:12px;direction:rtl}
