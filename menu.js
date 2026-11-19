@@ -55,7 +55,7 @@ const restaurantPhotos = {
  "Mütebbel": "assets/meze-cutouts/mutebbel.webp",
  "Pancarlı Humus": "assets/meze-cutouts/pancarli-humus.webp",
  "Muhammara": "assets/meze-cutouts/muhammara.webp",
- "Karışık Meze Tabağı": "assets/meze-cutouts/karisik-meze-tabagi-20261114.webp",
+ "Karışık Meze Tabağı": "assets/meze-cutouts/karisik-meze-tabagi-transparent.svg",
  "Tabbule": "assets/salad-cutouts/salads.webp",
  "Fettuş": "assets/salad-cutouts/salads.webp",
  "Falafel Salatası": "assets/salad-cutouts/salads.webp",

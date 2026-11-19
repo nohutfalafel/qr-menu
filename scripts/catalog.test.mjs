@@ -110,13 +110,14 @@ test('Şambali is hidden, reversible, and retains historic stable ID 32',()=>{
 });
 
 
-test('Karışık Meze Tabağı uses the approved square image and keeps its product data',()=>{
+test('Karışık Meze Tabağı uses its original GitHub photo with transparent circular cutout',()=>{
   const photoPath='assets/meze-cutouts/karisik-meze-tabagi-20261114.webp';
+  const transparentPath='assets/meze-cutouts/karisik-meze-tabagi-transparent.svg';
   const dish=catalog.products.find(p=>p.id===21);
   assert.equal(dish?.name.tr,'Karışık Meze Tabağı');
   assert.equal(dish?.price,200);
   assert.equal(dish?.active,true);
-  assert.equal(dish?.image,photoPath);
+  assert.equal(dish?.image,transparentPath);
   const binary=fs.readFileSync(path.join(root,photoPath));
   assert.equal(binary.subarray(0,4).toString('ascii'),'RIFF');
   assert.equal(binary.subarray(8,12).toString('ascii'),'WEBP');
@@ -125,7 +126,12 @@ test('Karışık Meze Tabağı uses the approved square image and keeps its prod
   assert.equal(createHash('sha1').update(gitBlobHeader).update(binary).digest('hex'),
     '6bd0956e9561337b74a0aa3d3a61810e2dd70cde');
   const renderer=fs.readFileSync(path.join(root,'menu.js'),'utf8');
-  assert.ok(renderer.includes('"Karışık Meze Tabağı": "'+photoPath+'"'));
+  assert.ok(renderer.includes('"Karışık Meze Tabağı": "'+transparentPath+'"'));
+  const cutout=fs.readFileSync(path.join(root,transparentPath),'utf8');
+  assert.match(cutout,/<ellipse /);
+  assert.match(cutout,/data:image\/webp;base64,/);
+  assert.ok(cutout.includes(binary.toString('base64')));
+
 });
 
 
