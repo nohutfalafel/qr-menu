@@ -17,7 +17,7 @@ publisher run under the same Windows user account.
 5. The startup script generates a random 48-byte access code and stores it
    encrypted using CurrentUser Windows DPAPI in BOTH the POS vault and the
    local publisher vault. No code needs to be copied into settings manually.
-6. Click Bağlantıyı Test Et. The POS connects to localhost:8787.
+6. Click Bağlantıyı Test Et. The POS connects to localhost:18787.
 7. Open QR Menü Yönetimi, load the menu and edit TR/EN/AR product titles,
    descriptions, price, stock, category, photo, campaigns, then save a local
    draft, preview it, and publish after confirmation.
@@ -54,5 +54,5 @@ The public QR page reads a managed menu overlay only if present. It has no
 write credentials. A successful GitHub commit is NOT proof that GitHub Pages
 has already deployed; confirm the page before claiming live success.
 
-Do not expose port 8787 to a public interface. Deploying publisher and
+Do not expose port 18787 to a public interface. Deploying publisher and
 cashier on different computers would require a separate TLS/auth design.
