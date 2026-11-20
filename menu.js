@@ -73,9 +73,11 @@ const platterPlateGeometry={"Kavurmalı Fatte":{"width":1254,"height":1254,"matr
 function isCutoutPhoto(source){return /^assets\/(?:meze|platter|salad|side|wrap|dessert)-cutouts\//.test(source||"");}
 function plateImage(source,plate){return `<image href="${escapeHtml(source)}" width="${plate.width}" height="${plate.height}" transform="matrix(${plate.matrix.join(" ")})"/>`;}
 function menuName(item){
+ const managed=window.nohutManagedTranslations?.get(item[1]);
+ if(managed)return managed.displayName?.[lang]||managed.name?.[lang]||item[1];
  return lang==='ar'?arabicMenu.items[item[1]][0]:(drinkDisplayNames[item[1]]?.[lang==='tr'?0:1]||item[lang==='tr'?1:2]);
 }
-function menuDescription(item){return lang==='ar'?arabicMenu.items[item[1]][1]:item[lang==='tr'?4:5];}
+function menuDescription(item){const m=window.nohutManagedTranslations?.get(item[1]);return m?m.description?.[lang]||'':(lang==='ar'?arabicMenu.items[item[1]][1]:item[lang==='tr'?4:5]);}
 const saladPhotoCrops={"Falafel Salatası":[22,19,674,681],"Tabbule":[729,16,692,691],"Fettuş":[1436,16,710,693]};
 
 // Original food and garnish are retained for kibbeh and sarma.
@@ -352,6 +354,8 @@ const fattePhotoCrops={
  "Kavurmalı Fatte":{width:1254,height:1254,crop:[50,50,1150,1150]}
 };
 function productVisual(item,index){
+ const managedImage=window.nohutManagedImages?.get(item[1]);
+ if(managedImage)return `<img class="real-dish-image" src="${escapeHtml(managedImage)}" alt="${escapeHtml(menuName(item))}" loading="lazy" decoding="async" style="object-fit:contain;position:absolute;inset:0"><span class="fallback-art" hidden aria-hidden="true">${pic(item[0],index)}</span>`;
  if(item[1]==='Vegan Dürüm')return `<svg class="meze-cutout wrap-photo" viewBox="0 0 1000 1000" role="img" aria-label="${escapeHtml(menuName(item))}"><svg x="65" y="210" width="870" height="580" viewBox="0 0 800 533" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="assets/wrap-cutouts/vegan-transparent.webp" width="800" height="533"/></svg></svg>`;
  if(item[1]==='Layali Lübnan')return `<img class="real-dish-image meze-cutout" src="assets/dessert-cutouts/lubnan-geceleri-poster-bowl.webp" alt="${escapeHtml(menuName(item))}" loading="lazy" decoding="async" style="object-fit:contain;padding:10px;position:absolute;inset:0">`;
  const fatte=fattePhotoCrops[item[1]];
@@ -380,7 +384,7 @@ function productVisual(item,index){
 function renderCategories(){
  byId('categories').setAttribute('aria-label',lang==='ar'?'أقسام القائمة':lang==='tr'?'Menü kategorileri':'Menu categories');
  byId('categories').innerHTML=categoryOrder.map(key=>{
-  const row=categories.find(c=>c[0]===key),label=lang==='ar'?arabicMenu.categories[key]:row[lang==='tr'?1:2],icon=categoryIcons[key];
+  const row=categories.find(c=>c[0]===key),label=lang==='ar'?arabicMenu.categories[key]:row[lang==='tr'?1:2],icon=categoryIcons[key]||'🧆';
   const crop=categoryCrops[key];
   const visual=crop?`<svg viewBox="${crop.join(' ')}" aria-hidden="true"><image href="assets/menu-reference.webp" width="1230" height="1278"/></svg>`:icon.startsWith('#')?`<svg aria-hidden="true"><use href="${icon}"/></svg>`:icon;
   return `<button class="category" type="button" data-category="${key}" aria-pressed="${key===category}"><span class="category-icon" aria-hidden="true">${visual}</span><span>${label}</span></button>`;
@@ -420,17 +424,18 @@ function renderMenu(){
  if(svgPhotoObserver)svgPhotoObserver.disconnect();
  const tr=lang==='tr',current=categories.find(c=>c[0]===category);
  const searching=byId('search').value.trim().length>0;
- byId('sectionTitle').textContent=searching?(lang==='ar'?'نتائج البحث':tr?'Arama sonuçları':'Search results'):(lang==='ar'?arabicMenu.categories[category]:current[tr?1:2]);
- byId('sectionDescription').textContent=searching?(lang==='ar'?'نتائج البحث في قائمة الطعام':tr?'Tüm menü kategorilerinden sonuçlar':'Results from all menu categories'):(lang==='ar'?arabicMenu.descriptions[category]:descriptions[category][tr?0:1]);
+ byId('sectionTitle').textContent=searching?(lang==='ar'?'نتائج البحث':tr?'Arama sonuçları':'Search results'):(lang==='ar'?arabicMenu.categories[category]:(current?.[tr?1:2]||category));
+ byId('sectionDescription').textContent=searching?(lang==='ar'?'نتائج البحث في قائمة الطعام':tr?'Tüm menü kategorilerinden sonuçlar':'Results from all menu categories'):(lang==='ar'?arabicMenu.descriptions[category]:(descriptions[category]?.[tr?0:1]||''));
  byId('search').placeholder=lang==='ar'?'ابحث عن طبق...':tr?'Menüde ara...':'Search menu...';
  byId('search').setAttribute('aria-label',lang==='ar'?'البحث في قائمة الطعام':tr?'Menüde ara':'Search menu');
  const normalize=value=>String(value).toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ı/g,'i').replace(/[\u064B-\u065F\u0670\u0640]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي');
  const query=normalize(byId('search').value.trim());
- let items=data.filter(item=>item[6]!==false&&(searching||category==='all'||category===item[0])&&normalize([item[1],item[2],item[4],item[5],...arabicMenu.items[item[1]],...(drinkDisplayNames[item[1]]||[])].join(' ')).includes(query));
+ let items=data.filter(item=>item[6]!==false&&(searching||category==='all'||category===item[0])&&normalize([item[1],item[2],item[4],item[5],...(arabicMenu.items[item[1]]||[]),...(drinkDisplayNames[item[1]]||[]),...Object.values(window.nohutManagedTranslations?.get(item[1])?.name||{}),...Object.values(window.nohutManagedTranslations?.get(item[1])?.description||{})].join(' ')).includes(query));
  if(!searching&&category==='drink')items=items.slice().sort((a,b)=>{
   const rank=item=>drinkOrder.includes(item[1])?drinkOrder.indexOf(item[1]):drinkOrder.length+data.indexOf(item);
   return rank(a)-rank(b);
  });
+ if(window.nohutManagedOrder)items=items.slice().sort((a,b)=>(window.nohutManagedOrder.get(a[1])??0)-(window.nohutManagedOrder.get(b[1])??0));
  byId('grid').innerHTML=items.map((item,index)=>{
   const displayName=menuName(item);
   const categoryRow=categories.find(row=>row[0]===item[0]);
