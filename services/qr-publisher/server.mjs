@@ -118,7 +118,7 @@ function validate(menu,previous) {
 function bootstrap(catalog) {
   return {...catalog,
     categories:catalog.categories.map((c,i)=>({...c,active:true,order:i})),
-    products:catalog.products.map((p,i)=>({...p,available:true,
+    products:catalog.products.map((p,i)=>({...p,active:p.active!==false,available:true,
       legacyKey:p.name.tr,order:i})),
   };
 }
