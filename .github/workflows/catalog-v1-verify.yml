@@ -32,6 +32,8 @@ jobs:
           node --check menu-data.js
           node --check menu.js
           node --check cms-live.js
+          node --check cms-pos-live.js
+          node --check services/qr-publisher/server.mjs
       - name: Check generator syntax
         run: node --check scripts/generate-catalog.mjs
       - name: Verify generated JSON equals current site content
