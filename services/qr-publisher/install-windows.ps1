@@ -52,7 +52,7 @@ try {$env:QR_PUBLISH_ADMIN_TOKEN=[Text.Encoding]::UTF8.GetString($clear)}
 finally {[Array]::Clear($clear,0,$clear.Length)}
 $env:GITHUB_APP_ID="5845851"
 $env:GITHUB_APP_PRIVATE_KEY_FILE=Join-Path $directory "github-app.pem"
-$env:QR_PUBLISH_PORT="8787"
+$env:QR_PUBLISH_PORT="18787"
 & node.exe (Join-Path $directory "server.mjs")
 '@
 $launch=Join-Path $folder 'launch.ps1'
@@ -69,7 +69,7 @@ if(-not $NoStartupShortcut){
 Start-Process -FilePath (Join-Path $PSHOME 'powershell.exe') -ArgumentList ('-NoProfile -WindowStyle Hidden -File "'+$launch+'"') -WorkingDirectory $folder
 Write-Host ''
 Write-Host 'NOHUT QR PUBLISHER INSTALLED' -ForegroundColor Green
-Write-Host 'Service URL: http://127.0.0.1:8787'
+Write-Host 'Service URL: http://127.0.0.1:18787'
 Write-Host 'Open POS > Ayarlar > Entegrasyonlar > Nohut QR Publisher.'
 Write-Host 'Paste the following one-time publishing access code there, then click Kaydet.'
 Write-Host 'This code will NOT be displayed again. Do not send it in ChatGPT or email.'

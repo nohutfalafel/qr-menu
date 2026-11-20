@@ -5,6 +5,7 @@ on:
       - 'cms/catalog-v1.json'
       - 'cms/product-ids.json'
       - 'scripts/**'
+      - 'services/qr-publisher/**'
       - '.github/workflows/catalog-v1-verify.yml'
   pull_request:
     paths:
@@ -13,6 +14,7 @@ on:
       - 'menu.js'
       - 'cms/**'
       - 'scripts/**'
+      - 'services/qr-publisher/**'
       - '.github/workflows/catalog-v1-verify.yml'
   workflow_dispatch:
 

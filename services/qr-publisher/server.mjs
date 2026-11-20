@@ -9,7 +9,7 @@ const privateKey=(process.env.GITHUB_APP_PRIVATE_KEY_FILE
   ? readFileSync(process.env.GITHUB_APP_PRIVATE_KEY_FILE,'utf8')
   : process.env.GITHUB_APP_PRIVATE_KEY || '').replace(/\\n/g,'\n');
 const adminToken=process.env.QR_PUBLISH_ADMIN_TOKEN || '';
-const port=Number(process.env.QR_PUBLISH_PORT || '8787');
+const port=Number(process.env.QR_PUBLISH_PORT || '18787');
 if(!privateKey.includes('BEGIN')||adminToken.length<32) {
   throw new Error('Set GITHUB_APP_PRIVATE_KEY_FILE and QR_PUBLISH_ADMIN_TOKEN (32+ characters).');
 }
