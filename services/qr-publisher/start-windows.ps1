@@ -4,10 +4,49 @@
 param([string]$PrivateKeyFile = "",[int]$Port = 8787)
 $ErrorActionPreference = 'Stop'
 if ($Port -lt 1024 -or $Port -gt 65535) { throw 'Invalid port.' }
-$node = Get-Command node.exe -ErrorAction SilentlyContinue
-if (-not $node) { throw 'Node.js 22+ bulunamadı. Node.js LTS yükleyin.' }
-$version = & $node.Source -p 'Number(process.versions.node.split(".")[0])'
-if ([int]$version -lt 22) { throw 'Node.js 22+ gereklidir.' }
+# POS uses -NoProfile, so fnm may not be active in PATH.
+# Query node --version rather than node -p to avoid PowerShell quoting issues.
+$nodeCandidates = New-Object 'System.Collections.Generic.List[string]'
+$onPath = Get-Command node.exe -ErrorAction SilentlyContinue
+if ($onPath) { $nodeCandidates.Add($onPath.Source) }
+$programFilesNode = Join-Path $env:ProgramFiles 'nodejs\node.exe'
+if (Test-Path -LiteralPath $programFilesNode -PathType Leaf) {
+  $nodeCandidates.Add($programFilesNode)
+}
+$fnmRoots = @(
+  $env:FNM_DIR,
+  (Join-Path $env:APPDATA 'fnm'),
+  (Join-Path $env:LOCALAPPDATA 'fnm'),
+  (Join-Path $env:USERPROFILE '.fnm')
+) | Where-Object { -not [string]::IsNullOrWhiteSpace($_) } | Select-Object -Unique
+foreach ($root in $fnmRoots) {
+  $versionsDir = Join-Path $root 'node-versions'
+  if (-not (Test-Path -LiteralPath $versionsDir -PathType Container)) { continue }
+  foreach ($versionDir in Get-ChildItem -LiteralPath $versionsDir -Directory -ErrorAction SilentlyContinue) {
+    $exe = Join-Path $versionDir.FullName 'installation\node.exe'
+    if (Test-Path -LiteralPath $exe -PathType Leaf) { $nodeCandidates.Add($exe) }
+  }
+}
+$availableNodes = @()
+foreach ($candidate in ($nodeCandidates | Select-Object -Unique)) {
+  try {
+    $nodeVersion = (& $candidate --version 2>$null | Select-Object -First 1)
+    $match = [regex]::Match([string]$nodeVersion,'^v([0-9]+)\.([0-9]+)\.([0-9]+)')
+    if ($LASTEXITCODE -eq 0 -and $match.Success) {
+      $availableNodes += [pscustomobject]@{
+        Path = $candidate
+        Version = [version]($match.Groups[1].Value + '.' + $match.Groups[2].Value + '.' + $match.Groups[3].Value)
+      }
+    }
+  } catch { continue }
+}
+$selectedNode = $availableNodes | Where-Object { $_.Version.Major -ge 22 } |
+  Sort-Object Version -Descending | Select-Object -First 1
+if (-not $selectedNode) {
+  throw 'Node.js 22+ bulunamadı. POS PowerShell -NoProfile ile acilir; Node 26 icin Windows kurulumunu veya fnm kurulum klasorunu kontrol edin.'
+}
+$nodePath = $selectedNode.Path
+Write-Host ('QR Publisher Node: ' + $selectedNode.Version.ToString() + ' (' + $nodePath + ')')
 if ([string]::IsNullOrWhiteSpace($PrivateKeyFile)) {
   $existingKey = Join-Path $env:APPDATA 'NohutFalafel\QrPublisher\github-app-private-key.pem'
   if (Test-Path -LiteralPath $existingKey -PathType Leaf) {
@@ -97,4 +136,4 @@ if (-not (Test-Path -LiteralPath $shortcutFile)) {
 }
 Write-Host 'Nohut QR Publisher started on localhost' $Port
 Write-Host 'POS > Ayarlar > Entegrasyonlar > GitHub: Bağlantıyı Test Et'
-& $node.Source (Join-Path $PSScriptRoot 'server.mjs')
+& $nodePath (Join-Path $PSScriptRoot 'server.mjs')
