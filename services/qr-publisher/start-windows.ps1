@@ -1,7 +1,7 @@
 # Nohut QR Publisher • Windows local service
 # Requires Node.js 22+ and the existing GitHub App private key from Downloads.
 # Generates a private random access code and stores it in Windows DPAPI for POS.
-param([string]$PrivateKeyFile = "",[int]$Port = 8787)
+param([string]$PrivateKeyFile = "",[int]$Port = 18787)
 $ErrorActionPreference = 'Stop'
 if ($Port -lt 1024 -or $Port -gt 65535) { throw 'Invalid port.' }
 # POS uses -NoProfile, so fnm may not be active in PATH.
@@ -134,6 +134,6 @@ if (-not (Test-Path -LiteralPath $shortcutFile)) {
   $link.Description = 'Nohut QR Publisher · Windows girişinde otomatik başlat'
   $link.Save()
 }
-Write-Host 'Nohut QR Publisher started on localhost' $Port
+Write-Host 'Starting Nohut QR Publisher on localhost' $Port
 Write-Host 'POS > Ayarlar > Entegrasyonlar > GitHub: Bağlantıyı Test Et'
 & $nodePath (Join-Path $PSScriptRoot 'server.mjs')
