@@ -167,6 +167,13 @@ const server=http.createServer(async(req,res)=>{
         const data=await readBody(req);
         if(typeof data.revision!=='string'||!data.catalog)throw fail(400,'Sürüm ve katalog gerekli.');
         const token=await installationToken(),original=await currentCatalog(token);
+        // Do not activate the managed feed until the QR website release is on main.
+        const marker=await getFile('cms/pos-managed-status.json',token,true);
+        if(!marker)throw fail(409,'QR web sitesi güncellemesi henüz kurulmadı. QR PR #7 ana dala alınmalı.');
+        let markerData;
+        try{markerData=JSON.parse(marker.text)}catch(_){throw fail(409,'QR yayınlama durumu geçersiz.');}
+        if(markerData.schemaVersion!==1||typeof markerData.enabled!=='boolean')
+          throw fail(409,'QR yayınlama durumu geçersiz.');
         if(data.revision!==original.revision)throw fail(409,'Web menüsü değişti. Güncel sürümü yeniden alın.');
         const updated=validate(data.catalog,original.catalog);
         const body={message:'cms: publish Nohut POS QR menu changes',
@@ -174,6 +181,17 @@ const server=http.createServer(async(req,res)=>{
         if(!original.revision.startsWith('bootstrap:'))body.sha=original.revision;
         const commit=await github('/repos/'+repo+'/contents/cms/pos-managed-menu.json',
           token,{method:'PUT',body});
+        // Enable the public feed only after the managed catalog was committed.
+        // If this update fails the caller sees an error and can inspect GitHub;
+        // customers will keep using the older published menu.
+        if(!markerData.enabled){
+          await github('/repos/'+repo+'/contents/cms/pos-managed-status.json',
+            token,{method:'PUT',body:{
+              message:'cms: activate POS managed QR menu after first publication',
+              branch,sha:marker.sha,
+              content:Buffer.from(JSON.stringify({schemaVersion:1,enabled:true},null,2)+'\n').toString('base64'),
+            }});
+        }
         return respond(res,200,{published:true,revision:commit.content.sha,
           commit:commit.commit?.sha,
           message:'GitHub dosyası kaydedildi. Pages dağıtımı ayrıca tamamlanmalıdır.'});
