@@ -4,6 +4,16 @@
 (async () => {
   try {
     await (window.nohutLegacyCmsReady || Promise.resolve());
+    // Versioned marker avoids requesting a managed catalog before the first
+    // confirmed POS publish. Existing QR website CMS remains authoritative.
+    const statusResponse=await fetch('cms/pos-managed-status.json?v='+Date.now(),
+      {cache:'no-store'});
+    if(statusResponse.status===404||statusResponse.status===503)return;
+    if(!statusResponse.ok)throw Error('Managed menu status HTTP '+statusResponse.status);
+    const status=await statusResponse.json();
+    if(status.schemaVersion!==1||typeof status.enabled!=='boolean')
+      throw Error('Invalid managed menu status');
+    if(!status.enabled)return;
     const response=await fetch('cms/pos-managed-menu.json?v='+Date.now(),
       {cache:'no-store'});
     if(response.status===404)return;
