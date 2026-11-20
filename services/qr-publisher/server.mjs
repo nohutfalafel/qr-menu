@@ -62,7 +62,7 @@ const safeAsset=value=>value===null||(typeof value==='string'&&
   /^assets\/[A-Za-z0-9_./-]+\.(png|jpg|jpeg|webp|svg)$/.test(value)&&
   !value.includes('..')&&!value.includes('//'));
 const goodPrice=v=>typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=100000&&
-  Math.round(v*100)===v*100;
+  Math.abs(Math.round(v*100)-v*100)<0.000001;
 function validate(menu,previous) {
   if(!menu||menu.schemaVersion!==1||menu.source!==repo||menu.currency!=='TRY'||
     !Array.isArray(menu.categories)||!Array.isArray(menu.products)||
