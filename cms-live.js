@@ -9,7 +9,7 @@
   };
   const validPrice = n => typeof n === 'number' && Number.isFinite(n) && n >= 0 && n <= 100000;
 
-  readJson('cms/menu-prices.json').then(groups => {
+  const priceReady = readJson('cms/menu-prices.json').then(groups => {
     if (!groups || typeof groups !== 'object' || Array.isArray(groups)) throw new Error('Invalid prices');
     const current = new Map(data.map(item => [item[1], item]));
     const proposed = new Map();
@@ -36,7 +36,7 @@
     if (path.startsWith('./assets/')) return path;
     return '';
   };
-  readJson('cms/campaigns.json').then(list => {
+  const campaignsReady = readJson('cms/campaigns.json').then(list => {
     if (!Array.isArray(list)) throw new Error('Invalid campaigns');
     const used = new Set();
     const safe = list.map(c => {
@@ -53,4 +53,5 @@
     window.nohutCampaigns = safe;
     window.dispatchEvent(new Event('nohut:campaigns-updated'));
   }).catch(error => console.error('Nohut campaign CMS:', error));
+  window.nohutLegacyCmsReady = Promise.allSettled([priceReady,campaignsReady]);
 })();
