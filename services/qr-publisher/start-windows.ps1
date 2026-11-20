@@ -15,8 +15,17 @@ if ([string]::IsNullOrWhiteSpace($PrivateKeyFile)) {
   }
 }
 if ([string]::IsNullOrWhiteSpace($PrivateKeyFile)) {
-  $candidates = @(Get-ChildItem -LiteralPath (Join-Path $env:USERPROFILE 'Downloads') -Filter 'nohut-qr-publisher*.pem' -File -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending)
-  if ($candidates.Count -gt 0) { $PrivateKeyFile = $candidates[0].FullName }
+  # Accept GitHub's original generated filename in the protected folder,
+  # including the user's existing nohut-qr-publisher.2026-11-20.private-key.pem.
+  # Prefer a protected local key, then Downloads, and finally the file picker.
+  $protectedFolder = Join-Path $env:APPDATA 'NohutFalafel\QrPublisher'
+  $candidateFiles = @()
+  foreach ($folder in @($protectedFolder,(Join-Path $env:USERPROFILE 'Downloads'))) {
+    if (Test-Path -LiteralPath $folder -PathType Container) {
+      $candidateFiles += @(Get-ChildItem -LiteralPath $folder -Filter 'nohut-qr-publisher*.pem' -File -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending)
+    }
+  }
+  if ($candidateFiles.Count -gt 0) { $PrivateKeyFile = $candidateFiles[0].FullName }
 }
 # If the key is neither in the protected folder nor Downloads, allow a
 # one-time Windows file selection. The PEM never goes into the GitHub repo.
