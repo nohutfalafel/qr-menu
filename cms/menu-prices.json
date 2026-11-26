@@ -193,11 +193,13 @@
     },
     {
       "name": "Beypazarı Mandalina Aromalı Maden Suyu",
-      "price": 35
+      "price": 35,
+      "available": false
     },
     {
       "name": "Şişe Cola Turka",
-      "price": 35
+      "price": 35,
+      "available": false
     },
     {
       "name": "Kutu Cola Turka",
