@@ -1236,7 +1236,7 @@
       "price": 35,
       "active": true,
       "image": "assets/drinks/beypazari-mandarin.png",
-      "available": true,
+      "available": false,
       "legacyKey": "Beypazarı Mandalina Aromalı Maden Suyu",
       "order": 43
     },
@@ -1261,7 +1261,7 @@
       "price": 35,
       "active": true,
       "image": "assets/drinks/cola-bottle.jpg",
-      "available": true,
+      "available": false,
       "legacyKey": "Şişe Cola Turka",
       "order": 44
     },
@@ -1386,7 +1386,7 @@
       "price": 45,
       "active": true,
       "image": "assets/drinks/didi-strawberry.jpg",
-      "available": true,
+      "available": false,
       "legacyKey": "Didi Çilek Aromalı Soğuk Çay",
       "order": 49
     },
