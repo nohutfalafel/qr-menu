@@ -36,7 +36,8 @@
     },
     {
       "name": "Nohut Özel Tabağı",
-      "price": 350
+      "price": 350,
+      "available": false
     },
     {
       "name": "Beyrut Tabağı",
@@ -107,11 +108,13 @@
     },
     {
       "name": "İçli Köfte (1 Adet)",
-      "price": 110
+      "price": 110,
+      "available": false
     },
     {
       "name": "Kibbe (3 Adet)",
-      "price": 330
+      "price": 330,
+      "available": false
     },
     {
       "name": "Kıymalı Sembusek (4 Adet)",
