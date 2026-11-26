@@ -361,7 +361,7 @@
       "price": 350,
       "active": true,
       "image": "assets/platter-cutouts/nohut-1-kibbe-2-sembusek-20261029.webp",
-      "available": true,
+      "available": false,
       "legacyKey": "Nohut Özel Tabağı",
       "order": 8
     },
@@ -761,7 +761,7 @@
       "price": 110,
       "active": true,
       "image": "assets/side-cutouts/kibbe-1-adet-transparent.svg",
-      "available": true,
+      "available": false,
       "legacyKey": "İçli Köfte (1 Adet)",
       "order": 24
     },
@@ -786,7 +786,7 @@
       "price": 330,
       "active": true,
       "image": "assets/products/kibbe-6003492c.jpg",
-      "available": true,
+      "available": false,
       "legacyKey": "Kibbe (3 Adet)",
       "order": 25
     },
