@@ -361,7 +361,7 @@
       "price": 350,
       "active": true,
       "image": "assets/platter-cutouts/nohut-1-kibbe-2-sembusek-20261029.webp",
-      "available": false,
+      "available": true,
       "legacyKey": "Nohut Özel Tabağı",
       "order": 8
     },
@@ -761,7 +761,7 @@
       "price": 110,
       "active": true,
       "image": "assets/side-cutouts/kibbe-1-adet-transparent.svg",
-      "available": false,
+      "available": true,
       "legacyKey": "İçli Köfte (1 Adet)",
       "order": 24
     },
@@ -786,7 +786,7 @@
       "price": 330,
       "active": true,
       "image": "assets/products/kibbe-6003492c.jpg",
-      "available": false,
+      "available": true,
       "legacyKey": "Kibbe (3 Adet)",
       "order": 25
     },
@@ -1236,7 +1236,7 @@
       "price": 35,
       "active": true,
       "image": "assets/drinks/beypazari-mandarin.png",
-      "available": false,
+      "available": true,
       "legacyKey": "Beypazarı Mandalina Aromalı Maden Suyu",
       "order": 43
     },
@@ -1261,7 +1261,7 @@
       "price": 35,
       "active": true,
       "image": "assets/drinks/cola-bottle.jpg",
-      "available": false,
+      "available": true,
       "legacyKey": "Şişe Cola Turka",
       "order": 44
     },
@@ -1386,7 +1386,7 @@
       "price": 45,
       "active": true,
       "image": "assets/drinks/didi-strawberry.jpg",
-      "available": false,
+      "available": true,
       "legacyKey": "Didi Çilek Aromalı Soğuk Çay",
       "order": 49
     },
