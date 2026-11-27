@@ -37,7 +37,7 @@
     {
       "name": "Nohut Özel Tabağı",
       "price": 350,
-      "available": false
+      "available": true
     },
     {
       "name": "Beyrut Tabağı",
@@ -68,7 +68,7 @@
     {
       "name": "Kavurmalı Fatte",
       "price": 330,
-      "available": false
+      "available": true
     }
   ],
   "meze": [
@@ -109,12 +109,12 @@
     {
       "name": "İçli Köfte (1 Adet)",
       "price": 110,
-      "available": false
+      "available": true
     },
     {
       "name": "Kibbe (3 Adet)",
       "price": 330,
-      "available": false
+      "available": true
     },
     {
       "name": "Kıymalı Sembusek (4 Adet)",
@@ -194,12 +194,12 @@
     {
       "name": "Beypazarı Mandalina Aromalı Maden Suyu",
       "price": 35,
-      "available": false
+      "available": true
     },
     {
       "name": "Şişe Cola Turka",
       "price": 35,
-      "available": false
+      "available": true
     },
     {
       "name": "Kutu Cola Turka",
@@ -220,7 +220,7 @@
     {
       "name": "Didi Çilek Aromalı Soğuk Çay",
       "price": 45,
-      "available": false
+      "available": true
     },
     {
       "name": "Didi Şeftali Aromalı Soğuk Çay",
